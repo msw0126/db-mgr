@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的数据</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/pagination.css" />
+    <link rel="stylesheet" href="css/data.css">
+</head>
+<body>
+<header>
+    <div class="headerLeft"><span class="headerLeftS">DATABRAIN 控制台</span><i></i></div>
+    <div class="headerRight"><p><img src="img/images_data/icon_wdsj2.png" alt=""></p><span>我的数据</span></div>
+</header>
+<div class="container">
+    <div class="top">
+        <div>
+            <i class="deleteAll"></i>
+            <i class="search searchIcon"></i>
+            <div class="searchArea">
+            	<em class="clean"></em>
+                <input type="text" class="srarchValue" placeholder="点击输入搜索内容">
+                <i id="searchTable" class="search"></i>
+            </div>
+        </div>
+        <div class="uploadButton">
+            <i></i><span>CSV文件</span>
+        </div>
+    </div>
+    <div class="dataList">
+        <ul class="dataTitle">
+            <li class="dataFileName"><input type="checkbox" class="select" id="deleteAll" />
+                <label for="deleteAll"></label><span>数据表名</span></li>
+            <li class="dataField">字段</li>
+            <li class="dataSize">大小</li>
+            <li class="dataTime">创建时间</li>
+            <li class="dataPerson">创建人</li>
+        </ul>
+        <ul class="dataInfo">
+         <!--<em class="edit"></em>-->
+        </ul>
+    </div>
+    <div class="M-box3"></div>
+</div>
+<div class="alertArea">
+    <div id="uploading">
+        <p class="loading">正在上传...</p>
+        <p class="progress"><span></span></p>
+    </div>
+    <div id="uploadFile">
+        <p class="fileTitle">CSV文件上传</p>
+        <div id="file">
+        	<p class="selectFileName">选择csv文件</p>
+        	<button class="selectFile">选择文件</button>
+        	<input type="file" name="" id="realFiles" value="" style="display: none;" />
+        	<div class="selectedFile">
+        		<i></i><span>loan</span>
+        		<button>重新选择</button>
+        	</div>
+        	<span class="error">数据表格式错误,请重新选择</span>
+        </div>
+        <div id="reName">
+        	<p class="selectFileName">数据表名</p>
+        	<input type="text" id="newName" placeholder="英文、数字、下划线，但不能全为数字"/>
+        	<span class="error">您的表名已存在,请修改表名</span>
+        </div>
+        <div class="buttons">
+        	<button class="cancel">取消</button>
+        	<button class="upload">上传</button>
+        </div>
+    </div>
+</div>
+<div id="alert_table">
+    <p class="table_name">请检查<span>user_info</span>表中的数据类型</p>
+    <ul class="table_title">
+        <li class="fields_sel"><input type="checkbox" checked="true" id="all-select"></li>
+        <li class="fields_one">字段名</li>
+        <li class="fields_two">字段类型</li>
+        <li class="fields_three">查看数据（仅显示前三行）</li>
+        <li class="fields_date">日期</li>
+    </ul>
+    <ul class="table_fields">
+
+    </ul>
+    <div class="table_footer">
+        <button id="hive_table_cancel">取消</button>
+        <button id="hive_table_save">保存</button>
+    </div>
+</div>
+<div id="shadow"></div>
+<div id="deleteArea">
+	<p class="deleteTop"><span>提示</span><i></i></p>
+	<div class="deleteInfo">确认删除您所选文件吗？</div>
+	<p class="deleteButtons">
+		<button class="cancelDelete">取消</button>
+		<button class="confirmDelete">确定</button>
+	</p>
+</div>
+<img src="img/save_loading.gif" alt="" class="img_load"/>
+</body>
+</html>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="../../api.js"></script>
+<script src="../../ajax.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<script src="js/data.js"></script>

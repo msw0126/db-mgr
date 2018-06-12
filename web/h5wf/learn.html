@@ -1,0 +1,56 @@
+<!--<link rel="stylesheet" href="dist/css/learn.min.css">-->
+<link rel="stylesheet" href="css/learn.css?v=2.1">
+<link rel="stylesheet" href="css/base.css?v=2.1">
+<!--<script src="dist/js/learn.min.js"></script>-->
+<script src="js/learn.js?v=2.1"></script>
+<div class="right-main" id="learn-main" data="" souid="">
+    <div class="right-heads">
+        <ul>
+            <li>参数设置</li>
+            <li>高级设置</li>
+        </ul>
+    </div>
+    <div class="right-content"  selected="true">
+        <ul>
+            <li>
+                <label>ID变量</label>
+                <div class="c_nav_list">
+                    <input type="text" id="c_data_learn_id" value="点击选择数据" style="width:60%;outline:none;margin-top:1px;border:none;padding-left:6px;font-size:12px;line-height:20px;color: #dcdde2;">
+                    <i></i>
+                </div>
+                <ul id="c_data_learn_id_list" class="onther_ul"></ul>
+                <span class="error_learn">此项不能为空</span>
+            </li>
+            <li>
+                <label>目标变量</label>
+                <div class="c_nav_list">
+                    <input type="text" id="c_data_learn_target" value="点击选择数据" style="width:60%;outline:none;margin-top:1px;border:none;padding-left:6px;font-size:12px;line-height:20px;color: #dcdde2;">
+                    <!--<em id="c_data_learn_target">点击选择数据</em>-->
+                    <i></i>
+                </div>
+                <ul id="c_data_learn_target_list" class="onther_ul"></ul>
+                <span class="error_learn">此项不能为空</span>
+            </li>
+            <li>
+                <label>建模算法</label>
+                <div class="c_nav_list" >
+                    <!--<input type="text" id="gbm" value="随机森林" style="width:60%;outline:none;margin-top:1px;border:none;padding-left:6px;font-size:12px;line-height:20px;">-->
+                    <em id="gbm">点击选择算法</em>
+                    <input type="hidden" />
+                    <i></i>
+                </div>
+                <ul id="algorithm">
+                </ul>
+            </li>
+            <div class="run"><span>*</span>运行参数配置</div>
+            <div class="c_save_learn">保存<span>（默认高级参数）</span></div>
+        </ul>
+        <div id="nameHH"><span>算法名称：</span><a id="algorithmNameT"></a><input type="hidden" id="algorithmEName" /></div>
+        <ul style="display: none;" id="algorithm_list">
+        	
+
+        </ul>
+            <div class="c_save_learn_algorithm">保存</div>
+        
+    </div>
+</div>

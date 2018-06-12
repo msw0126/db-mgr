@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="css/act.css?v=2.1">
+<style>
+	.exportedButton{
+	    width: 170px;
+	    height: 24px;
+	    border: 1px solid #33ccff;
+	    border-radius: 2px;
+	    color: #fff;
+	    font-family: "微软雅黑";
+	    font-size: 12px;
+	    text-align: center;
+	    line-height: 22px;
+	    background: #33ccff;
+	    margin-top: 40px;
+	    margin-bottom: 90px;
+	    margin-left: 30px;
+	    outline: none;
+	    cursor: pointer;
+	}
+</style>
+<div class="right-main" id="exported-main" data="" souid="">
+    <div class="right-head">参数设置</div>
+    <div class="right-content">
+    	<button class="exportedButton">导出模型</button>
+    </div>
+     
+</div>
+<script>
+	$('button').click(function(){
+		var modl_ids = $("#exported-main").attr('data');
+		var souid = $("#exported-main").attr('souid')
+		console.log(modl_ids)
+		console.log(proid)
+		window.open(server + '/deploy/export?project_id=' + proid + '&component_id=' + modl_ids+'&input_comp_id='+souid);
+	})
+</script>

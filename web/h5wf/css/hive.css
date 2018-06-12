@@ -1,0 +1,451 @@
+
+.hive-right-content_ul {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 48px;
+    list-style: none;
+    clear: both;
+}
+.hive-right-content_ul>li:first-child {
+    margin-top: 0px;
+}
+.hive-right-content_ul>li {
+    position: relative;
+    margin-top: 24px;
+    height: 50px;
+    width: 170px;
+}
+.hive-right-content_ul>li>label {
+    text-align: left;
+    color: #858585;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.hive-right-content_ul>li>div {
+    width: 170px;
+    height: 24px;
+    border: 1px solid #33ccff;
+    border-radius: 2px;
+    color: #33ccff;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+.hive-right-content_ul>li>div:hover{
+    background: #33CCFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.hive-right-content_ul>li>input {
+    color: #858585;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    line-height: 22px;
+    height: 22px;
+    width: 135px;
+    border: 1px solid #dcdde2;
+    border-radius: 2px;
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-right: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#hive_name_new{
+	width: 162px;
+	padding-right: 0px;
+}
+.hive-right-content_ul>div {
+    width: 170px;
+    height: 24px;
+    border: 1px solid #33ccff;
+    border-radius: 2px;
+    color: #33ccff;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    background: #fff;
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+.hive-right-content_ul>div:hover {
+    background: #33CCFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search,#search1{
+    float: right;
+    margin-top: -19px;
+    position: relative;
+    padding: 14px;
+    /* width: 14px; */
+    /* height: 14px; */
+   
+    /* text-align: center; */
+    /* margin-left: -58px; */
+    right: -10px;
+    cursor: pointer;
+}
+.search_table{
+	 background: url(../img/icon/icon_search03.png)no-repeat;
+}
+.edit_table_fields{
+	background: url(../img/icon/icon_revise02.png) no-repeat;
+	display: none;
+}
+.hive_ul{
+	background: #f5f5f5;
+	box-shadow: 0 0 10px 2px #cbcbcb;
+	position: absolute;
+	z-index: 1;
+	display: none;
+	width: 170px;
+	/*max-height: 200px;*/
+	/*overflow-y: scroll;
+	overflow-x: hidden;*/
+	/*height: auto;*/
+	/*overflow: auto;*/	
+	/*overflow-x: visible;*/
+}
+.hive_ul>li{
+	/*height: 24px;*/
+	line-height: 20px;
+	/*cursor: pointer;*/
+}
+.hive_ul>li>div{
+	margin: 0px 10px;
+	border-bottom: 1px solid #dcdde2;
+
+}
+.hive_ul>li>div>span{
+font-size: 13px;
+    color: #858585;
+    width: 110px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+}
+.hive_ul>li:hover{
+	background: #81dcfb;
+}
+.hive_ul>li:hover div>span{
+	color: #fff !important;
+}
+
+.hive_ul>li>div>p{
+	display: none;
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    width: 30px;
+    height: 26px;
+    position: relative;
+}
+.hive_ul>li>div>p>em{
+    width: 14px;
+    height: 10px;
+    background: url(../img/icon/icon_see02.png) no-repeat;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.hive_ul>li:hover div>p{
+	display: inline-block;
+	
+}
+.hive_ul>li>div>p:hover em{
+	background: url(../img/icon/icon_see02_clk.png) no-repeat;
+}
+.hive_ul>li>div>p:hover span{
+	display: block;
+}
+.hive_ul>li>div>p>span{
+	position: absolute;
+    display: none;
+    width: 42px;
+    height: 26px;
+    /*background: red;*/
+    top: 20px;
+    left: 10px;
+    background: url(../img/icon/pc_bg_yl.png) no-repeat;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 26px;
+}
+#fields{
+	width: 280px;
+    height: 160px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0px;
+    top: 200px;
+    background: #3f3f3f;
+    opacity: 0.7;
+    z-index: 4;
+    border-radius: 2px;
+    display: none;
+}
+#fields>div{
+	height: 30px;
+	border-bottom: 1px solid #000;
+}
+
+#fields_val{
+    width: 280px;
+    height: 160px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0px;
+    top: 200px;
+    /* background: #3f3f3f; */
+    /* opacity: 0.7; */
+    z-index: 5;
+    border-radius: 2px;
+    color: #fff;
+    display: none;
+}
+.fileds_title{
+	height: 30px;
+	overflow: hidden;
+}
+.fileds_title>li{
+	float: left;
+	font-size: 12px;
+	line-height: 30px;
+}
+.one{
+    width: 124px;
+    margin-left: 10px;
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.two{
+	
+}
+#close_fields{
+float: right;
+    margin-top: -20px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon/icon_del02.png) no-repeat;
+    cursor: pointer;
+}
+.fields_table{
+
+	height: 130px;
+	overflow: scroll;
+	
+}
+.fields_table>li>ul{
+	overflow: hidden;
+}
+.fields_table>li>ul>li{
+	float: left;
+	line-height: 25px;
+}
+#alert_table{
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    right: 300px;
+    top: 180px;
+    box-shadow: 0 0 10px 2px #8D8D8D;
+    border-radius: 5px;
+    z-index: 10;
+    background: #fff;
+    display: none;
+}
+.table_name{
+    margin: 0;
+    line-height: 44px;
+    padding-left: 30px;
+    color: #383838;
+    font-size: 14px;
+    border-bottom: 2px solid #d1e9f2;
+}
+.table_title{
+	overflow: hidden;
+	background: #ebf9fe;
+}
+.table_fields{
+	height: 280px;
+	overflow: scroll;
+	border-bottom: 2px solid #d1e9f2;
+}
+.table_fields>li>ul{
+	overflow: hidden;
+}
+.table_fields>li>ul>li{
+	float: left;
+	line-height: 35px;
+	font-size: 14px;
+	color: #383838;
+}
+.table_title>li{
+    float: left;
+    line-height: 25px;
+    font-size: 12px;
+    color: #858585;
+}
+.fields_sel{
+    width:50px;
+    height:22px;
+    padding-top:3px;
+    border-right: 1px solid #f0f0f0;line-height:80px;
+    padding-left:30px;
+    position: relative;
+
+}
+.fields_one{
+	width: 249px;
+	margin-left: 30px;
+	border-right: 1px solid #f0f0f0;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.fields_two{
+    width: 169px;
+    border-right: 1px solid #f0f0f0;
+    margin-left: 10px;
+}
+.fields_three{
+	 margin-left: 10px;
+}
+.table_footer{
+    line-height: 48px;
+    margin: 0 30px;
+    text-align: right;
+}
+.table_footer>button{
+	width: 86px;
+    height: 26px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#hive_table_new{
+    background: #fff;
+    border: 1px solid #3cf;
+    color: #3cf;
+    float: right;
+    margin-right: 30px;
+    width: 86px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+}
+#hive_table_save{
+    background: #3cf;
+    color: #fff;
+    margin-left: 30px;
+}
+#hive_table_cancel{
+	background: no-repeat;
+    border: 1px solid #3cf;
+    color: #3cf;
+}
+.type_list{
+	
+	width: 90px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.type_list>img{
+	float: left;
+	margin-top: 9px;
+}
+.date_type_list{
+	width: 75px;
+	cursor: pointer;
+}
+.type_list>em,.date_type_list>em{
+    width: 11px;
+    height: 5px;
+    display: block;
+    float: right;
+    background: url(../img/icon/list_jt.png) no-repeat;
+    margin-top: 16px;
+    margin-right: 7px;
+    /*margin-left: 15px;*/
+}
+.table_fields>li{
+	position: relative;
+	border-bottom: 1px solid #f0f0f0;
+}
+.type_list_val,.data_type_list_val{
+	box-shadow: 0 0 9px 0 #cbcbcb;
+    display: none;
+    position: absolute;
+    z-index: 3333333;
+    width: 90px;
+    top: 29px;
+    background: #fff;
+	left: 367px;
+}
+.data_type_list_val{
+	left: 540px;
+}
+.type_list_val>li,.data_type_list_val>li{
+    border-bottom: 1px solid #DCDDE2;
+    line-height: 25px;
+    font-size: 12px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.type_list_val>li:hover,.data_type_list_val>li:hover{
+	background: #3cf;
+	color: #fff;
+}
+.shadow{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    display: none;
+    z-index: 2;
+}
+.error_type{
+	font-size: 12px;
+	color: #fe7e71;
+	margin-left: 5px;
+}
+.fields_sel img{position: absolute;width:13px;height:13px;z-index: 99999;top:12px;right:33px;}
+.addTable{
+    font-size:12px;
+    color: #858585;
+}
+.rename{
+    margin-top:35px !important;
+}
+.addTable a{
+    color: #33ccff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.addTable:hover{
+    text-decoration: underline;
+}

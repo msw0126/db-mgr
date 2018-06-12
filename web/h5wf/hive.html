@@ -1,0 +1,65 @@
+
+<link rel="stylesheet" href="css/base.css?v=2.1">
+<!--<link rel="stylesheet" href="dist/css/csvload.min.css">-->
+<link rel="stylesheet" type="text/css" href="css/hive.css?v=2.1"/>
+<!--<script src="js/csvload.js"></script>-->
+<!--<script src="dist/js/jquery.form.min.min.js"></script>-->
+<!--
+<link rel="stylesheet" href="css/webuploader.css" >
+<script src="js/webuploader.noimage.min.js"></script>
+-->
+<div class="right-main" id="hive-main" data="" >
+    <div class="right-head">参数设置</div>
+    <div class="right-content">
+        <ul class="hive-right-content_ul">
+           <li>
+                <label>数据表</label>
+                <input type="text" id="hive_table_name" placeholder="请输入相关表名">
+
+                <!--<img src="img/icon/icon_search03.png" alt="" id="search"/>-->
+                <em id="search" class="search_table"></em>
+                <em id="search1" class="edit_table_fields"></em>
+			   <p class="addTable"><span>找不到可用的表，</span><a href="data.html" target="_blank">去上传</a></p>
+                <ul class="hive_ul">
+                </ul>
+            </li>
+             <li class="rename">
+                <label>重命名</label>
+                <input type="text" id="hive_name_new" placeholder="">
+            </li>
+            <div class="m_save_reader">保存</div>
+        </ul>
+        <div id="fields">
+        	<div></div>
+        </div>
+        <div id="fields_val">
+        	<div>
+        		<ul class="fileds_title">
+        			<li class="one">字段名</li>
+        			<li class="two">数据类型</li>
+        		</ul>
+        		<em id="close_fields"></em>
+        	</div>
+        	<ul class="fields_table">
+        	</ul>
+        </div>
+</div>
+<div id="alert_table">
+	<p class="table_name">请检查<span>user_info</span>表中的数据类型<button id="hive_table_new">重新选择表</button></p>
+	<ul class="table_title">
+		<li class="fields_sel"><input type="checkbox" checked="true" id="all-select"></li>
+		<li class="fields_one">字段名</li>
+		<li class="fields_two">字段类型</li>
+		<li class="fields_three">日期</li>
+		
+	</ul>
+	<ul class="table_fields">
+	</ul>
+	<div class="table_footer">
+		<button id="hive_table_cancel">取消</button>
+		<button id="hive_table_save">保存</button>
+	</div>
+</div>
+</div>
+<div class="shadow"></div>
+<script src="js/hive.js?v=2.1"></script>

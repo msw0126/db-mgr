@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<link rel="stylesheet" href="script/bootstrap-3.3.7-dist/css/bootstrap.css?v=2.1" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css?v=2.1" />
+		<link rel="stylesheet" href="css/iconfont.css?v=2.1" />
+		<link rel="stylesheet" href="css/jPages.css?v=2.1" />
+		<link rel="stylesheet" href="css/jquery-confirm.min.css?v=2.1" />
+		<link rel="stylesheet" href="css/index.css?v=2.1" />
+	</head>
+	<body ng-app="myApp">
+		<!--头部-->
+		<!--{{include 'same/header'}}-->
+		<header id="index_header">
+			<p id="header_p"></p>
+			<div class="container header-top">
+				<div class="header-left" ui-sref='home'>
+				    <img src="img/pic_logo.png" alt="" />
+				</div>
+				<div class="header-right">
+					<div class="header-img"><img src="img/pic_head.png" alt="" /></div>
+					<span class="header-role">admin</span>
+					<p class="header-right-p">
+						<a class="header-name"><span>请登录</span>
+							<span class="xian"></span>
+						</a>
+						<a><span class="header-login">退出</span></a>
+					</p>
+				</div>
+			</div>
+		</header>
+		<main class="container y-content">
+			<!--侧边栏-->
+			<!--{{include "same/slide"}}-->
+			<section class="left-content">
+				<ul class="left-ul">
+					<!--<li class="left-ul-title user-info"><img src="img/title3.png" alt="" /><span>账户信息</span></li>
+					<li class="left-ul-list user-info" ui-sref="trprojectTrainMgr">个人资料</li>
+					<li class="left-ul-list user-info" ui-sref="projectProdMgr">我的消息</li>
+					<li class="left-ul-title"><img src="img/icon-qx.png" alt="" /><span>权限管理</span></li>
+					<li class="left-ul-list" ui-sref="sysUserManager">人员管理</li>-->
+					<li class="">
+						<!--<ul>
+							<li class="left-ul-title user-info"><img src="img/title1.png" alt="" /><span>账户信息</span></li>
+							<li class="left-ul-list">lalalalall</li>
+						</ul>-->
+					</li>
+					<li>
+						<!--<ul>
+							<li class="left-ul-title user-info"><img src="img/title2.png" alt="" /><span>账户信息</span></li>
+							<li class="left-ul-list">lalalalall</li>
+						</ul>-->
+					</li>
+					<li>
+						<!--<ul>
+							<li class="left-ul-title user-info"><img src="img/icon_user.png" alt="" /><span>账户信息</span></li>
+							<li class="left-ul-list my_info_" ui-sref="my_info"><span>我的消息</span><span class="info_num"></span></li>
+						</ul>-->
+					</li>
+					<li>
+						
+					</li>
+				</ul>
+			</section>
+			<!--主要内容-->
+			<div class="main-content" ui-view>
+
+			</div>
+		</main>
+
+		<!--尾部-->
+		<!--{{include "same/footer"}}-->
+<!--
+		<footer>
+			<div class="container footer-div">
+				<ul class="footer-ul">
+					<li><span>关于桃树</span></li>
+					<li>Tel:0517-89703310</li>
+					<li>杭州市滨江区阡陌路459号聚光中心</li>
+				</ul>
+				<ul class="footer-ul-last">
+					<li><span>联系我们</span></li>
+					<li>Tel:0517-89703310</li>
+					<li>杭州市滨江区阡陌路459号聚光中心</li>
+				</ul>
+			</div>
+		</footer>
+-->
+		<footer class="login_footer ">
+			<ul class="footer_ul_one container">
+				<li class="footer-li-one">
+					<ul>
+						<li class="footer-li-title data_title"><span>Data</span><span>Brain</span></li>
+						<li class="data-d-li"><i class="data-d"></i></li>
+						<li>机器学习平台</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li class="footer-li-title">产品服务</li>
+						<li>桃树科学七剑</li>
+						<li>桃树解决方案</li>
+						<li>桃树产品</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li class="footer-li-title">关于桃树	</li>
+						<li>桃树</li>
+						<li>桃树控股</li>
+					</ul>
+				</li>
+				<li class="footer-li-title">
+					<ul>
+						<li class="footer-li-title">桃树控股</li>
+					</ul>
+				</li>
+				<li class="footer-li-title">
+					<ul>
+						<li class="footer-li-title">加入我们</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="data-ul-last">
+						<li class="footer-li-title">联系我们</li>
+						<li><i class="icon iconfont icon-dianhua"></i>Tel：0571-89703310</li>
+						<li><i class="icon iconfont icon-dizhi"></i>杭州市滨江区阡陌路459号聚光中心</li>
+						<li><i class="icon iconfont icon-youjian"></i>contact@taodatarobot.com</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="container login_footer_p">Copyright © 2016  杭州桃树科技有限公司 版权所有   浙ICP备16035153号-1 </p>
+		</footer>
+		<div class="alert_success"><img src="img/green.png" alt="" /><span class="alert_content">新建成功！</span></div>
+
+	</body>
+
+</html>
+<script src="script/jquery.js"></script>
+<script src="api.js?v=2.1"></script>
+<script src="script/jquery-confirm.min.js"></script>
+<script src="script/angular.js"></script>
+<script src="script/angular-ui-router.js"></script>
+<script src="script/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/index.js?v=2.1"></script>

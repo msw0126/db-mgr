@@ -1,0 +1,200 @@
+<link rel="stylesheet" href="css/iconfont.css?v=2.1" />
+<!--<link rel="stylesheet" type="text/css" href="dist/css/robotx.min.css" />-->
+<link rel="stylesheet" href="css/robotx_spark.css?v=2.1" />
+<!--<link rel="stylesheet" href="dist/css/robotx_spark.min.css" />-->
+
+<div class="right-main" style="height:100%;"  id="robotx-main-spark" data="" souid="">
+	<div class="c-right-title-one">参数设置</div>
+	<form style="height:100%;" id="robot-x_form">
+		<input type="hidden" name="componentID" value="">
+		<input type="hidden" name="projectID" value="">
+		<div class="c-robot-content">
+<!--
+			<div class="c-robot-id">
+				<label>只生成特征字典 <input type="checkbox"  id="dictOnly" name="dictOnly" value="true" size="50"/></label>
+			</div>
+			<div class="c-robot-target">
+				<label>生成文件类型</label>
+				<div class="c_nav_list-robot">
+					<em id="c_robot_tag">训练数据</em>
+					<i class="icon iconfont icon-icon-xialakuang"></i>
+				</div>
+				<ul id="c_nav_list_robox">
+					<li>训练数据</li>
+					<li>测试数据</li>
+				</ul>
+			</div>
+-->
+			<div id="m_robot_configure" class="c-robot-save">数据表字段配置</div>
+			<div class="run"><span>*</span>运行参数配置</div>
+			
+<!--			<div id="m_robot_save" class="c-robot-save">保存</div>-->
+		</div>
+	</form>
+</div>
+<div class="robot-main" id="">
+	<ul class="robot-main-ul-header">
+		<li>
+			<div id="guide_one" class="robot-main-ul-header-div div-checked"><span class="div-checked-span">1</span>容器表选择</div>
+			<hr />
+		</li>
+		<li>
+			<div id="guide_two" class="robot-main-ul-header-div"><span>2</span>容器表配置</div>
+			<hr />
+		</li>
+		<li>
+			<div id="guide_three" class="robot-main-ul-header-div"><span>3</span>表间关联配置</div>
+			<!--<hr />-->
+		</li>
+		<!--<li>
+			<div id="guide_four" class="robot-main-ul-header-div"><span>4</span>结果展示</div>
+		</li>-->
+		<li><span class="icon iconfont icon-guanbi"></span></li>
+	</ul>
+	<div class="robot-main-one">
+		<div class="robot-main-one-edit">
+			<div class="robot-main-one-edit-left">
+				<img src="img/rongqi.png" alt="" />
+				<p id="robot_main_one_left_p">从下表中选择一张表拖拽到此区域，作为容器表</p>
+			</div>
+			<div class="robot-main-one-edit-right">
+				<p id="robot_one_right_p">您还未选择容器表，暂不能进行配置</p>
+
+			</div>
+		</div>
+		<div class="robot-main-one-table">
+			<ul id="robot_one" class="robot-main-one-table-ul">
+			
+			</ul>
+		</div>
+	</div>
+	<div id="robot_main_two_parent" class="robot-main-two">
+		<p class="robot-main-two-p">用鼠标给表间连线并配置关系</p>
+		<ul id="robot_main_two" class="robot-main-one-table-ul" style="position:relative; display:block;">
+		</ul>
+
+		<div class="robot-main-three-fields">
+		    <div class="hidden_aut"></div>
+			<div class="robot-main-three-fields-bottom">
+				<p>从下表中勾选与容器表关联的字段并配置字段类型</p>
+				<ul id="robot_main_three_fields_bottom">
+					<li>
+						<ul>
+							<li class="firlds-kuan">字段名</li>
+							<li class="firlds-kuan">数据类型</li>
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="robot-main-two-fields-three">
+				<span id="custom_add">新增</span>
+				<ul id="custom_fields" class="custom-fields">
+					<li class="first-list">
+						<ul>
+							<li>字段1</li>
+							<li>方法</li>
+							<li>字段2</li>
+							<li>目标字段</li>
+							<li>类型</li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="robot-fields-footer">
+			    <button id="custom_field">自定义字段</button>
+				<button id="robotx_save">保&nbsp;&nbsp;存</button>
+			</div>
+		</div>
+	</div>
+			<div class="robot-main-two-fields">
+        <div class="hidden_aut"></div>
+			<div class="robot-main-two-fields-bottom">
+				<p>从下表中勾选与容器表关联的字段并配置字段类型</p>
+				<ul id="robot_main_two_fields_bottom" data="">
+					<li>
+						<ul>
+							<li class="firlds-kuans">主键</li>
+							<li class="firlds-kuans">关联字段</li>
+							<li class="fields-skin">数据类型</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="robotx_tips">
+               <p>时间周期填写示例：</p>
+               <p>填"<i id="robotx_tips_one">7</i>"则以容器表时间为原点，<i id="robotx_tips_two">得到7天为一个周期的汇总数据</i>，如：前1期（前1-7天），前2期（8-14天），前3期（前15-21天）,...,前n期收入和，收入最大值，最小值等新数据字段。</p>
+               <p>后续可基于新数据进行进一步特征加工，得到如：前三期总收入的移动平均值。</p>
+               <em id="robotx_tips_close"></em>
+           </div>
+			<div class="robot-main-two-fields-top">
+				<div class="top-first">
+					<p>容器表</p>
+					<p style="height:25px;margin-top:10px;">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;键：</p>
+				</div>
+				<div class="top-second">
+					<p>表2</p>
+					<p>关联主键：</p>
+				</div>
+				 
+				<div class="top_three">
+                    <label>与目标表关系：</label>
+                    <ul>
+                        <li><i class="icon iconfont  icon-duihao1 add-background" ></i><span>1:1</span></li>
+                        <li><i class="icon iconfont  icon-duihao1"></i><span>N:1</span></li>
+                        <li><span style="padding-left:0px;">时间周期:</span><input type="text" class="top_three_input" disabled="disabled" /><em id="data_time"></em></li>
+                    </ul>
+                    <div class="robtx_help"></div>
+                </div>
+			</div>
+			<div class="robot-fields-footer">
+				<button id="robotx_save1" style="margin-right:0px !important;">保&nbsp;&nbsp;存</button>
+			</div>
+		</div>
+	<div class="robot-main-three">
+       <div class="robot-main-three-top">
+           <div class="robot-main-three-top-title">
+               <i></i>
+               <label>特征字典</label>
+           </div>
+           <div class="robot-main-three-top-search">
+               <span>搜索</span>
+               <div class="robot-main-three-top-search-content">
+                   <input type="text" />
+                   <div class="robot-main-three-top-search-content-icon"></div>
+               </div>
+           </div>
+       </div>
+       <div class="robot-main-three-content">
+           <div class="robot-main-three-content-top">
+               <ul>
+                    <li class="robotx-list-four1">生成特征名称</li>
+                    <li class="robotx-list-four2">字段类型</li>
+                    <!--<li class="robotx-list-four3">字段来源</li>
+                    <li class="robotx-list-four4">特征描述</li>   -->
+               </ul>
+           </div>
+           <div class="robot-main-three-content-content">
+               <Ul>
+               </Ul>
+           </div>
+       </div>
+       <div class="other_line"></div>
+    </div>
+	<div class="robot-main-footer">
+		<button class="robot-fail">取&nbsp;&nbsp;消</button>
+		<button class="robot-success">下一步</button>
+	</div>
+</div>
+<ul id="right_key">
+	<li id="dele">删除</li>
+</ul>
+
+
+<script src="js/jquery-2.1.4.min.js?v=2.1"></script>
+<script src="js/jquery-ui.min.js?v=2.1"></script>
+<!--<script src="js/jsPlumb-2.2.8.js"></script>-->
+<!--<script src="dist/js/robotx.min.js"></script>-->
+<script src="js/robotx_spark.js?v=2.1"></script>
+<!--<script src="dist/js/robotx_spark.min.js"></script>-->

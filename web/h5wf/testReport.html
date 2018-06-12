@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATOM-Test</title>
+    <link rel="stylesheet" href="css/top.css?v=2.1" />
+    <link rel="stylesheet" href="css/learnReport.css?v=2.1">
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+
+<div class="top">
+    <ul class="top-l pull-left">
+        <!--<li class="pull-left"><img src="img/img/t_06.png"><span class="s1">控制台</span><span class="bor pull-right"></span></li>-->
+        <li class="pull-left"><img src="img/img/t_03.png"><span class="s2">ATOM-Test执行报告</span></li>
+    </ul>
+    <ul id="top_right">
+    	<li id="downloadpdf">
+    		<i id="download"></i>
+    		<span>下载pdf</span>
+    	</li>
+    	<li onclick="window.open('help.html')">
+    		<i id="help"></i>
+    		<span>帮助文档</span>
+    	</li>
+    </ul>
+    <!--<ul class="top-r pull-right">
+        <li><img src="img/img/tr_03.png"><span>实验项目1</span></li>
+        <li><img src="img/img/tr_05.png"><span>SUN</span></li>
+        <li><img src="img/img/tr_07.png"><span>2017-11-21 12:23</span></li>
+    </ul>-->
+</div>
+
+<div class="content clear">
+    <!--模型综合评估指标--开始--未完成-->
+    <div class="section">
+        <h4 class="con-h4">模型综合评估指标</h4>
+        <div class="section-d">
+            <div id="model_jxs">
+                <h3 class="con-h3 margin-tb">交叉验证模型概要</h3>
+                <div class="con-con con3" id="model_jx">
+                    <ul class="ul-title" id="KFoldsTitle">
+                    	<li></li>
+                    </ul>
+                    <div class="tab-con tab-con-css clear bor" id="KFoldsSummary">
+
+                    </div>
+
+                </div>
+            </div>
+            <div style="position: relative;">
+                <h3 class="con-h3 margin-tb">
+                    测试数据评估结果
+                    <a class="model_tip">
+                        <i class="triangle-left"></i>
+                        <div>
+                            <p>Roc曲线<span> :ROC（Receive Operating Characteristic）和AUC常被用
+                            来评价二值分类器的优劣。</span></p>
+                            <p>Precision/Recall曲线<span> :Precision/Recall曲线反映了分类器对正样本
+                            的识别准确程度和对正样本的覆盖能力之间的权衡。</span></p>
+                            <p>Lift曲线<span> :Lift 曲线是不同阈值下Lift和预测正样本占比的轨迹。</span></p>
+                            <p>K-S曲线<span> :KS（Kolmogorov-Smirnov）:K－S曲线主要是验证模型对违
+                            约对象的区分能力。</span></p>
+                            <p>Cumulative Gain图<span> ：指累积增益，即预测正样本比率（横坐标） 和 真正率（纵坐标）之间的关系。</span></p>
+
+                        </div>
+                    </a>
+                </h3>
+                <ul id="testResultTitle">
+                	<li class="checked"><span>ROC</span></li>
+                	<li><span>Precision/Recall</span></li>
+                	<li><span>Lift图</span></li>
+                	<li><span>K-S图</span></li>
+                	<li><span>Cumulative Gain图</span></li>
+                </ul>
+                <div id="card">
+                	测试数据测试数据测试数据
+                </div>
+                <ul id="picture">
+                	<li id="roc"></li>
+                	<li id="Precision"></li>
+                	<li id="Lift"></li>
+                	<li id="KS"></li>
+                	<li id="Gair"></li>
+                </ul>
+                <div id="infoCard">
+                	<ul>
+                	</ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--模型综合评估指标--结束-->
+
+    <!--模型评估指标--开始-->
+    <div class="section">
+        <h4 class="con-h4">模型评估指标</h4>
+        <div class="section-d">
+            <div>
+                <h3 class="con-h3 margin-tb">最大标准量得分阀值表</h3>
+                <div class="con-con con4">
+                    <ul class="ul-title">
+                        <li>metric</li>
+                        <li>threshold</li>
+                        <li>value</li>
+                        <!--<li>idx</li>-->
+                    </ul>
+                    <div id="ModelMaxCriteria" class="tab-con tab-con-css clear bor">
+         
+
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <h3 class="con-h3 margin-tb">测量集混淆矩阵和评估指标
+                <a class="model_tip">
+                        <i class="triangle-left" style="left:14px;"></i>
+                        <div class="seeMore">
+                            <p><span class="seeMoreEm" type="hx">查看更多</span></p>
+
+                        </div>
+                    </a>
+                </h3>
+                <div id="search">
+                    0/1比例判定阀值<input type="text" id="value_Matrix" name="value" value="0.5"><span>（取值范围<span id="min"></span>-<span id="max"></span>，可精确到0.01）</span>
+                </div>
+				<span class="error">请输入正确的阀值</span>
+                <div class="con-con con5">
+                    <ul class="ul-title" id="Confusion">
+                        <li></li>
+                        <li>0（预测值）</li>
+                        <li>1（预测值）</li>
+                        <li>Error</li>
+                        <li>Rate</li>
+                    </ul>
+                    <div class="tab-con tab-con-css clear bor" id="ConfusionMatrix">
+                        <ul>
+                            <li>0（真实值）</li>
+                        </ul>
+                        <ul>
+                            <li>1（真实值）</li>
+                        </ul>
+                        <ul>
+                            <li>Total</li>
+                        </ul>
+                        
+                    </div>
+
+                </div>
+                <div id="threshold">
+                	
+                </div>
+            </div>
+			<div id="scores">
+				<h3 class="con-h3 margin-tb">
+                    按score分组统计
+                    <a class="model_tip">
+                        <i class="triangle-left" style="left:14px;"></i>
+                        <div>
+                            <p>Score分组统计<span>就是把模型预测输出的分数分为10个区间，精确度为0.1，然后进行分组统计各项评估指标。</span><span class="seeMoreEm" type="score">查看更多>></span></p>
+
+                        </div>
+                    </a>
+                </h3>
+				<div id="search1">
+                    0/1比例判定阀值<input type="text" id="value_Matrix1" name="value" value="0.5"><span>（取值范围<span id="min1"></span>-<span id="max1"></span>，可精确到0.1）</span>
+                </div>
+                <span class="error"></span>
+				<div class="con-con con5">
+					<ul class="ul-title" id="score">
+                        <li>score_bins</li>
+                        <li>tps</li>
+                        <li>fps</li>
+                        <li>tns</li>
+                        <li>fns</li>
+                        <li>recall</li>
+                        <li>precision</li>
+                        <li>accuracy</li>
+                        <li>Specificity</li>
+                        <!--<li>本组AUC</li>
+                        <li>积累AUC</li>-->
+                    </ul>
+                    <div id="ScoreGroup" class="bor">
+                    </div>
+				</div>
+			</div>
+			<div id="Dimensions">
+				<h3 class="con-h3 margin-tb">
+                    Top维度指标统计
+                     <a class="model_tip">
+                        <i class="triangle-left" style="left: 14px;"></i>
+                        <div>
+                            <p>topN维度统计指标<span>是指将score中topN%（N=10，20，30...100）的样本全部看做正样本，然后对其它指标进行计算。</span><span class="seeMoreEm" type='topn'>查看更多>></span></p>
+                        </div>
+                    </a>
+                </h3>
+				<div class="con-con con5">
+					<ul class="ul-title" id="Dimension">
+                        <li>score_TopN</li>
+                        <li>tps</li>
+                        <li>fps</li>
+                        <li>tns</li>
+                        <li>fns</li>
+                        <li>recall</li>
+                        <li>precision</li>
+                        <!--<li>本组AUC</li>-->
+                    </ul>
+                    <div id="TopnMetricList" class="bor">
+                    	
+                    </div>
+				</div>
+			</div>
+
+        </div>
+
+    </div>
+    <!--模型评估指标--结束-->
+	
+
+
+</div>
+<script type="text/javascript">
+
+//  $(function(){
+//
+//      //默认为隐藏
+//      $(".model_tip").find("div").hide();
+//      $(".triangle-left").hide();
+//
+//      //阻止冒泡事件
+//      function stopPropagation(e) {
+//          if (e.stopPropagation)
+//              e.stopPropagation();
+//          else
+//              e.cancelBubble = true;
+//      }
+//
+//      //点击任何一个地方，信息框，隐藏
+//      $(document).bind('click', function() {
+//          $(".model_tip").find("div").hide();
+//          $(".triangle-left").hide();
+//      });
+//
+//      //测试评估结果图标点击事件
+//      $(".model_tip").on("click",function(e){
+//          stopPropagation(e);
+//          $(this).find("div").fadeIn();
+//          $(this).find(".triangle-left").fadeIn();
+//          $(this).css("background","url('img/icon/icon_question1_clk.png')");
+//
+//      });
+//
+//      //点击搜索框的清除，输入框值清除
+//      $(document).on("click", "[name='clear']", function () {
+//          $(this).parent().find("input").val("");
+//          $(this).parent().find("input").focus();
+//      });
+//
+//  })
+</script>
+<script src="js/echarts.common.min.js?v=2.1"></script>
+<script src="js/learnReport.js?v=2.1"></script>
+<script type="text/javascript" src="../../api.js?v=2.1"></script>
+<script type="text/javascript" src="../../ajax.js?v=2.1"></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>

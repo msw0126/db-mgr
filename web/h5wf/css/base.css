@@ -1,0 +1,176 @@
+@keyframes mymove{
+    from{ 
+        background-position: -351px 0px;
+    }
+    to{
+        background-position: 0px 0px;
+    }
+}
+@-webkit-keyframes mymove{
+     from{ 
+        background-position: 351px 0px;
+    }
+    to{
+        background-position: 0px 0px;
+    }
+}
+
+/*保存动态图*/
+.save-layer-gif{
+    width: 18px;
+    height: 18px;
+   float: left;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+/*---滚动条默认显示样式--*/
+
+::-webkit-scrollbar-thumb {
+	background-color: #cbcbcb;
+	height: 50px;
+	outline-offset: -2px;
+	outline: 2px solid #fff;
+	-webkit-border-radius: 2px;
+	border: 2px solid #fff;
+	border-radius: 2px;
+}
+
+
+/*---滚动条大小--*/
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 8px;
+}
+
+
+
+.right-main{
+    width: 232px;
+    height: 100%;
+    background: #f5f5f5;
+}
+.right-head{
+    width: 232px;
+    height: 48px;
+    background: rgb(245,245,245);
+    color: rgb(133,133,133);
+    text-align: center;
+    line-height: 48px;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+}
+.right-content {
+    width: 232px;
+    box-shadow: 0px 3px 5px #dad8d8 inset;
+    background-color: #f5f5f5;
+    clear: both;
+    height: 100%;
+    overflow-y: auto;
+}
+.onther_ul{
+    overflow: auto!important;
+    max-height: 200px;
+    height: auto;
+}
+.onther_ul>li{
+    width: 154px !important;
+}
+/* ----progress---- */
+
+.proess-show{
+    display: block;
+}
+.proess_bj{
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+     filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    border-radius: 2px;
+}
+.proess>label{
+    float: left;
+    margin-top: 16px;
+    color: #EDEDED;
+    text-align: center;
+    width: 92px;
+    font-size: 12px;
+    font-family: HiraginoSansGB-W6;
+    font-weight: bold;
+}
+.proess{
+    margin: 0px;
+    line-height: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.55;
+    border-radius: 2px;
+    filter: alpha(opacity=55);
+    -moz-opacity: .55;
+    -khtml-opacity: 0.55;
+}
+.proesss{
+    margin: 0px;
+    line-height: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+.proess-show-go{
+    width: 80px;
+    height: 6px;
+    border-radius: 10px;
+    background-image: url(../img/pic_progress_bar.png);
+    background-repeat: no-repeat;
+   
+    animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s linear; /*Safari and Chrome*/
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
+    float: left;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+.proess-show-pending{
+	width: 80px;
+    height: 6px;
+    border-radius: 10px;
+    background: #afacac;
+    margin-top: 38px;
+    margin-left: 5px;
+    display: none;
+}
+.proess-show-ok{
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon_success.png) no-repeat;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.assembly_tab{
+    width:14px;
+    height:14px;
+    position: absolute;
+    top:8px;
+    right:8px;
+    display:none;
+}
+
+
+

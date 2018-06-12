@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="script/bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css?v=2.1" />
+		<link rel="stylesheet" href="css/iconfont.css?v=2.1" />
+		<link rel="stylesheet" href="css/index.css?v=2.1" />
+	</head>
+
+	<body>
+		<header id="sign_header">
+			<p id="sign_header_p"></p>
+			<div class="">
+				<div id="sign_header_one_div">
+					<span id="sign_title_one">DataBrain</span>
+					<span id="sign_title_two">注册Databrain账号</span>
+				</div>
+				<div class="sign_header_two_div">已有账号,<a href="login.html">立即登录</a>
+				</div>
+			</div>
+		</header>
+		<main id="sign_main" class="">
+			<div id="sign_main_top">
+				<div id="sign_one_title" class="title-sel">
+					<span class="title-number title-num-sel">1</span>
+					<span class="title-content title-con-sel">基本信息</span>
+				</div>
+				<div id="sign_two_title">
+					<span class="title-number">2</span>
+					<span class="title-content">注册账户</span>
+				</div>
+				<div id="sign_three_title">
+					<span class="title-number">3</span>
+					<span class="title-content">完成注册</span>
+				</div>
+			</div>
+			<form id="sign_form" action="">
+				<div>
+					<label for="real_name">真实姓名</label><input type="text" name="real_name" id="real_name" placeholder="请输入您的真实姓名" /><span>此项为必填</span>
+				</div>
+				<div>
+					<label for="company_name">公司名</label><input type="text" name="company_name" id="company_name" placeholder="请输入您的公司名" /><span>此项为必填</span>
+				</div>
+				<div>
+				<label for="idenity" class="change-height">职位</label>
+				<div id="position_div" tabindex="-1"><span class="select-span">请选择您的职位</span><i class="icon iconfont icon-icon-weixialashi"></i></div>
+				<ul id="role_select">
+					<li><span>保险精算师</span></li>
+					<li><span>商业分析师</span></li>
+					<li><span>行政人员</span></li>
+					<li><span>初级数据科学家</span></li>
+					<li><span>高级数据科学家</span></li>
+					<li><span>数据产品经理</span></li>
+					<li><span>IT专业人员</span></li>
+					<li><span>软件工程师</span></li>
+					<li><span>其它</span></li>
+				</ul>
+				<span class="span-change">此项为必填</span>
+					
+				</div>
+				<div>
+				<label for=""  class="change-height">账号类型</label>
+				<div id="usertype_div" tabindex="-1"><span class="select-span">请选择您的账号类型</span><input type="hidden" value="" /><i class="icon iconfont icon-icon-weixialashi"></i></div>
+				<ul id="position_select">
+					<li><span>个人</span><input type="hidden" value="2"  /></li>
+					<li><span>企业</span><input type="hidden" value="1"  /></li>
+				</ul>
+				<span class="span-change">此项为必填</span>
+					
+				</div>
+				<div>
+				<label for="address">联系地址</label><input type="text" name="address" id="address" placeholder="请输入您的真实地址" /><span>此项为必填</span>
+					
+				</div>
+
+				<!--<p id="form_p"><span id="form_duihao" class="icon iconfont icon-duihao1"></span><span>同意并遵守</span><span>《服务条款》</span></p>-->
+				<input id="first_sub" type="button" value="确&nbsp;&nbsp;&nbsp;定" />
+			</form>
+			<form id="sign_form_two" action="">
+				   <div>
+				<label for="email">公司邮箱</label><input type="email" name="email" id="email" placeholder="请输入您所在的公司邮箱" value=""/><span>此项为必填</span>
+                	
+               </div>
+				<div>
+				<label id="change_label" for="validate_div">验证码</label>
+					<div id="validate_div"><input type="text" name="validate" id="validate" placeholder="请输入验证码" /><button type="button" id="send_vaildate">发送邮箱验证码</button></div>
+					<span id="change_span">此项为必填</span>
+				</div>
+                 <div>
+                 	<label for="user_password">密码</label><input type="password" name="user_password" id="user_password"  placeholder="字母、数字或者英文符号，最短8位，区分大小写" /><span>此项为必填</span>
+                 </div>
+				<div>
+					<label for="password_again">确认密码</label><input type="password" name="password_again" id="password_again" placeholder="请再次输入密码" /><span>此项为必填</span>
+				</div>
+                <div>
+				<label for="phone">手机号</label><input type="text" name="phone" id="phone" placeholder="请输入手机号" maxlength="11"/><span>此项为必填</span>
+                	
+                </div>
+				<div id="buttons_two">
+					<button id="button_pre" type="button">上一步</button>
+					<button id="second_sub" type="button">注&nbsp;&nbsp;册</button>
+				</div>
+			</form>
+			<div id="sign_success">
+				<span class="icon iconfont icon-lvseduihao"></span>
+				<div id="">
+					<p>恭喜您，注册成功！</p>
+					<span id="success_one">您的注册请求已收到，进入审核阶段，审核成功后会有邮件提醒，请注意查收！</span>
+					<span id="success_two">审核通过后您可以使用<span>DataBrain</span>的服务。</span>
+				<button type="button" onclick="location.href='login.html'">返回首页</button>
+					
+				</div>
+
+			</div>
+		</main>
+		<footer id="sign_footer">
+			Copyright © 2016 杭州桃树科技有限公司 版权所有 浙ICP备16035153号-1
+		</footer>
+		<div class="alert_success"><img src="img/green.png" alt="" /><span class="alert_content">新建成功！</span></div>
+	</body>
+
+</html>
+<script src="script/jquery.js"></script>
+<!--<script src="js/api.js"></script>-->
+<script src="api.js?v=2.1" ></script>
+<script src="script/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="js/sign.js?v=2.1"></script>

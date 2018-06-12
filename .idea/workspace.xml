@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbf37f98-5e9d-4afa-adf7-fc6fa13ec5b4" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/h5wf/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7636">
+              <caret line="332" column="47" lean-forward="false" selection-start-line="332" selection-start-column="47" selection-end-line="332" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/h5wf/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="1192" column="31" lean-forward="true" selection-start-line="1192" selection-start-column="31" selection-end-line="1192" selection-end-column="31" />
+              <folding>
+                <marker date="1523928230324" expanded="true" signature="9088:9168" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="9647:9667" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="10416:10436" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="10565:10646" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="11534:11615" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="12352:12432" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="26618:26631" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="28181:28194" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="28231:28244" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="28701:28714" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="28751:28764" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="29206:29219" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="29256:29269" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="29704:29717" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="29754:29767" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="30205:30218" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="30255:30268" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="30709:30722" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="30759:30772" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="54210:54223" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="54793:54854" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="55348:55409" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="55893:55954" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="56255:56268" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="56474:56535" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="56829:56842" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="57042:57103" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="57392:57405" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="57604:57665" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="57952:57965" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="58164:58225" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="58513:58526" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="58728:58789" ph="..." />
+                <marker date="1523928230324" expanded="true" signature="59073:59086" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rel</find>
+      <find>operation</find>
+      <find>dataInfo</find>
+      <find>全选</find>
+      <find>.search</find>
+      <find>deleteAll</find>
+      <find>.hive-right-content_ul&gt;li</find>
+      <find>.top</find>
+      <find>停止执行</find>
+      <find>stop_button</find>
+      <find>停止</find>
+      <find>app_id</find>
+      <find>has_log</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/h5wf/css/data.css" />
+        <option value="$PROJECT_DIR$/web/h5wf/css/hive.css" />
+        <option value="$PROJECT_DIR$/web/h5wf/hive.html" />
+        <option value="$PROJECT_DIR$/web/h5wf/data.html" />
+        <option value="$PROJECT_DIR$/web/h5wf/js/data.js" />
+        <option value="$PROJECT_DIR$/api.js" />
+        <option value="$PROJECT_DIR$/web/h5wf/js/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="242" />
+    <option name="y" value="32" />
+    <option name="width" value="1361" />
+    <option name="height" value="860" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataBrain_mgr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBrain_mgr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBrain_mgr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBrain_mgr" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBrain_mgr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBrain_mgr" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="h5wf" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DataBrain\台州银行新需求\DataBrain_mgr\web\h5wf\img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbf37f98-5e9d-4afa-adf7-fc6fa13ec5b4" name="Default" comment="" />
+      <created>1520216713883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520216713883</updated>
+      <workItem from="1520216719415" duration="11962000" />
+      <workItem from="1520297994595" duration="10750000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22712000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="242" y="32" width="1361" height="860" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04611837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7636">
+          <caret line="332" column="47" lean-forward="false" selection-start-line="332" selection-start-column="47" selection-end-line="332" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27393">
+          <caret line="1191" column="30" lean-forward="false" selection-start-line="1191" selection-start-column="30" selection-end-line="1191" selection-end-column="30" />
+          <folding>
+            <marker date="1523928230324" expanded="true" signature="9088:9168" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="9647:9667" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="10416:10436" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="10565:10646" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="11534:11615" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="12352:12432" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="26618:26631" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28181:28194" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28231:28244" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28701:28714" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28751:28764" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29206:29219" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29256:29269" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29704:29717" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29754:29767" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30205:30218" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30255:30268" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30709:30722" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30759:30772" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="54210:54223" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="54793:54854" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="55348:55409" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="55893:55954" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56255:56268" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56474:56535" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56829:56842" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57042:57103" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57392:57405" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57604:57665" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57952:57965" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58164:58225" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58513:58526" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58728:58789" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="59073:59086" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/act.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/data.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10557">
+          <caret line="459" column="1" lean-forward="false" selection-start-line="459" selection-start-column="1" selection-end-line="459" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/act.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="47" column="123" lean-forward="false" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/data.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/actReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/js/hive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2088">
+          <caret line="267" column="57" lean-forward="true" selection-start-line="267" selection-start-column="57" selection-end-line="267" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/hive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="446" column="20" lean-forward="false" selection-start-line="446" selection-start-column="20" selection-end-line="446" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/hive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="20" column="64" lean-forward="true" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/data.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/css/act.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7636">
+          <caret line="332" column="47" lean-forward="false" selection-start-line="332" selection-start-column="47" selection-end-line="332" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/h5wf/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="1192" column="31" lean-forward="true" selection-start-line="1192" selection-start-column="31" selection-end-line="1192" selection-end-column="31" />
+          <folding>
+            <marker date="1523928230324" expanded="true" signature="9088:9168" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="9647:9667" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="10416:10436" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="10565:10646" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="11534:11615" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="12352:12432" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="26618:26631" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28181:28194" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28231:28244" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28701:28714" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="28751:28764" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29206:29219" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29256:29269" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29704:29717" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="29754:29767" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30205:30218" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30255:30268" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30709:30722" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="30759:30772" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="54210:54223" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="54793:54854" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="55348:55409" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="55893:55954" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56255:56268" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56474:56535" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="56829:56842" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57042:57103" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57392:57405" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57604:57665" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="57952:57965" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58164:58225" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58513:58526" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="58728:58789" ph="..." />
+            <marker date="1523928230324" expanded="true" signature="59073:59086" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

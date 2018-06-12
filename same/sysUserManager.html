@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="css/pagination.css?v=2.1" />
+<div>
+	<p class="main-content-p"><span>人员管理</span><span></span></p>
+	<div class="shiyan-header role-header">
+		<span>角&nbsp;&nbsp; 色</span>
+		<ul class="role">
+			<li><span class=" icon iconfont icon-duihao1"></span><label for="">数据科学家</label><input type="hidden" value="data_science"/></li>
+			<li><span class=" icon iconfont icon-duihao1"></span><label for="">IT工程师</label><input type="hidden" value="IT_engineer"/></li>
+			<li><span class=" icon iconfont icon-duihao1"></span><label for="">数据业务人员</label><input type="hidden" value="biz_data"/></li>
+		</ul>
+	</div>
+	<div class="shiyan-key user-key">
+		<span>手机号</span>
+		<div class="shiyan-search">
+			<input type="text" placeholder="请输入相关人员手机号" id="tel_search" />
+			<span class="icon iconfont icon-sousuo"></span>
+		</div>
+		<!--<span class="shiyan-sousuo">搜&nbsp;索</span>-->
+	</div>
+	<div class="shiyan-add">
+		<span class="icon iconfont icon-xinjian"></span><span>新增人员</span>
+	</div>
+	<div class="shiyan-main">
+		<ul class="shiyan-ul">
+			<li class="shiyan-title role-title">
+				<ul>
+					<li>人员名</li>
+					<li>手机号</li>
+					<li>角色管理</li>
+					<li>人员状态</li>
+					<li>操作</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+<div class="M-box3"></div>
+</div>
+<div class="modal fade" id="myModal_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 460px;">
+			<div class="add-html" style="width: 460px;height: 528px;">
+				<h2>新建人员</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<form action="" class="add-form user-form">
+					<label for="username">姓&nbsp;&nbsp;&nbsp;名</label><input type="text" id="username" placeholder="点击输入员工姓名" required="" /><span class="star">*</span><br /><span class="tishi">此项为必填</span>
+                    
+					<!--<label for="user_nick_name">用户名：</label><input type="text" id="username" placeholder="点击输入员工用户名" required="" /><span class="star">*</span><br /><span class="tishi">此项为必填</span>-->
+
+					<label for="mobile">手机号</label><input type="text" id="mobile" placeholder="点击输入员工手机号" maxlength="11" /><span class="tishi move">请输入正确的手机号格式</span><br />
+					<label for="email">邮&nbsp;&nbsp;&nbsp;箱</label><input type="email" id="email" placeholder="点击输入员工邮箱" /><span class="tishi moves">请输入正确的邮箱格式</span><br />
+					<label for="">状&nbsp;&nbsp;&nbsp;态</label>
+					<ul id="status">
+						<li><span class="fenlei_span">正常</span><input type="hidden" value="1" /></li>
+						<li><span>失效</span><input type="hidden" value="0" /></li>
+					</ul>
+					<div style="position: relative;">
+						<label for="user_role" style="position: relative;top: 5px;">角&nbsp;&nbsp;&nbsp;色：</label>
+						<div class="user_role_select"><span>数据科学家</span><i class="icon iconfont icon-icon-weixialashi"></i><input type="hidden" value="data_science" /></div>
+						<ul id="user_role">
+							<li><span>数据科学家</span><input type="hidden"  value="data_science"/></li>
+							<li><span>IT工程师</span><input type="hidden"  value="IT_engineer"/></li>
+							<li><span>数据业务人员</span><input type="hidden"  value="biz_data"/></li>
+						</ul>						
+					</div>
+
+					<input type="button" id="user_sub" value="确&nbsp;&nbsp;&nbsp;定" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_user_new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content"  style="width: 460px;">
+			<div class="add-html"  style="width: 460px;height: 484px;">
+				<h2>修改人员信息</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<form action="" class="add-form user-form">
+					<label for="username1">姓&nbsp;&nbsp;&nbsp;名</label><input type="text" id="username1" placeholder="点击输入员工姓名" required="" readonly/>
+					<span class="star">*</span><br />
+					<span class="tishi">此项为必填</span>
+
+					<!--<label for="user_nick_name1">用户名：</label><input type="text" id="username1" placeholder="点击输入员工用户名" required="" readonly="readonly"/>
+					<span class="star">*</span><br />
+					<span class="tishi">此项为必填</span>-->
+
+					<label for="mobile1">手机号</label><input type="text" id="mobile1" maxlength="11" placeholder="点击输入员工手机号" />
+					<span class="tishi">请输入正确的手机号</span><br />
+					<label for="email1">邮&nbsp;&nbsp;&nbsp;箱</label><input type="email" id="email1" placeholder="点击输入员工邮箱" />
+					<span class="tishi">请输入正确的邮箱</span><br />
+					<!--<label for="">状&nbsp;&nbsp;&nbsp;态:</label>-->
+					<!--<ul id="status1">
+						<li><span class="icon iconfont icon-duihao1 role_checked "></span><span>正常</span><input type="hidden" value="1" /></li>
+						<li><span class="icon iconfont icon-duihao1"></span><span>失效</span><input type="hidden" value="0" /></li>
+					</ul>-->
+					<div style="position: relative;">
+					<label for="user_role1">角&nbsp;&nbsp;&nbsp;色</label>
+					<div class="user_role_select1"><span></span><i class="icon iconfont icon-icon-weixialashi"></i><input type="hidden" value="data_science" /></div>
+					<ul id="user_role1">
+						<li><span>数据科学家</span><input type="hidden" value="data_science"/></li>
+						<li><span>IT工程师</span><input type="hidden" value="IT_engineer"/></li>
+						<li><span>数据业务人员</span><input type="hidden" value="biz_data"/></li>
+					</ul>					
+					</div>
+
+					<input type="button" id="user_sub1" value="确&nbsp;&nbsp;&nbsp;定" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_user_changePwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 460px;">
+			<div class="add-html" style="width: 460px;">
+				<h2>修改密码</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<form action="" class="add-form user-form">
+					<label for="">用户名</label><input type="text" id="cz_username" readonly placeholder="请输入用户名" /><br />
+					<label for="">旧密码</label><input type="password" id="old_pwd" placeholder="请输入旧密码"/><span class="tishi movess">您输入的旧密码有误</span><br />
+					<!--<a class="diushi">忘记密码？</a>-->
+					<label for="">新密码</label><input type="password" id="password" name="password" placeholder="请输入新密码"/><br />
+					<label for="">新密码</label><input type="password" name="password" placeholder="请再次输入新密码"/>
+					<span class="tishi moves">输入的两次新密码不一致</span>
+					<input type="button" id="user_pwd" value="提交更改" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_alert_new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="confirm_alert">
+                        <p class="confirm_tishi">
+							<span>提示</span>
+                        <span class="icon iconfont icon-guanbi1 guanbi" data-dismiss="modal"></span>
+						</p>
+						<p class="confirm_content">您正在删除实验项目<span>1</span>，您确定该操作吗？</p>
+						<div class="submit_button">
+							<button class="quxiao" data-dismiss="modal">取消</button>
+							<button class="queding" >确定</button>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+<script src="script/jquery.pagination.js"></script>
+<script src="js/user.js?v=2.1"></script>

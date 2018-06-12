@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATOM_Act</title>
+    <link rel="stylesheet" href="css/top.css?v=2.1">
+    <link rel="stylesheet" href="css/ATOM-art.css?v=2.1">
+    <script src="js/echarts.common.min.js?v=2.1"></script>
+    <script src="js/jquery-2.1.4.min.js?v=2.1"></script>
+</head>
+<body>
+<div class="top">
+    <ul class="top-l pull-left">
+        <!--<li class="pull-left"><img src="img/img/t_06.png"><span class="s1">控制台</span><span class="bor pull-right"></span></li>-->
+        <li class="pull-left"><img src="img/img/t_03.png"><span class="s2">ATOM-Act执行报告</span></li>
+    </ul>
+    <ul id="top_right">
+    	<li id="downloadpdf">
+    		<i id="download"></i>
+    		<span>下载pdf</span>
+    	</li>
+    	<li onclick="window.open('help.html')">
+    		<i id="help"></i>
+    		<span>帮助文档</span>
+    	</li>
+    </ul>
+    <!--<ul class="top-r pull-right">
+        <li><img src="img/img/tr_03.png"><span>实验项目1</span></li>
+        <li><img src="img/img/tr_05.png"><span>SUN</span></li>
+        <li><img src="img/img/tr_07.png"><span>2017-11-21 12:23</span></li>
+    </ul>-->
+</div>
+<div class="content clear">
+
+    <!--算法参数设置--开始-->
+    <div class="section">
+        <h4 class="con-h4">样本概况</h4>
+        <div class="section-d sample_survey ">
+            <div>
+                <span id="sample_num"></span>
+            </div>
+        </div>
+    </div>
+    <div class="section clear">
+        <h4 class="con-h4">打分分布</h4>
+        <div class="section-d score_distribution">
+            <div id="score_main">
+
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h4 class="con-h4">正负样本量</h4>
+        <div class="section-d score_distribution">
+             <div id="search" style="margin-top:20px;">
+                 0/1比例判定阀值<input type="text" name="value" value="0.5" id="Positive"><span>（取值范围<span id="min"></span>-<span id="max"></span>，可精确到0.01）</span>
+             </div>
+             <span class="error"></span>
+            <div id="pn_sample_size">
+
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h4 class="con-h4">预测打分表</h4>
+        <div class="section-d">
+            <div id="forecast_scoring">
+               导出预测打分表
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../api.js?v=2.1"></script>
+<script type="text/javascript" src="../../ajax.js?v=2.1"></script>
+<script type="text/javascript" src="js/actReport.js?v=2.1"></script>
+</body>
+</html>

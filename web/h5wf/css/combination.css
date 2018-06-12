@@ -1,0 +1,127 @@
+.reader-right-content_ul {
+    display: block;
+    width: 210px;
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 48px;
+    list-style: none;
+    clear: both;
+    /*overflow: hidden;*/
+}
+.c_save_reader{
+    width: 170px;
+    height: 24px;
+    margin: 0 auto;
+    border: 1px solid #33ccff;
+    border-radius: 2px;
+    color: #33ccff;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    background: #fff;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+.reader-right-content_ul>li>ul>li{
+	float: left;
+}
+.reader-right-content_ul>li>ul{
+	/*overflow: hidden;*/
+	height: 34px;
+}
+.list{
+    width: 90px;
+    height: 24px;
+    /* background: red; */
+    float: left;
+    background: #e9eced;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 12px;
+    color: #383838;
+    /*text-align: center;*/
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+.list_second{
+	position: relative;
+}
+.add_key,.less_key{
+    width: 15px;
+    height: 15px;
+    /* background: blue; */
+    margin-top: 2px;
+    font-size: 20px;
+    background: #3cf;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    line-height: 15px;
+    cursor: pointer;
+}
+.list_sel{
+	width: 100px;
+	height: 22px;
+	border: 1px solid #DCDDE2;
+	background: #fff;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.list_sel>em{
+    width: 15px;
+    height: 15px;
+    /*background: red;*/
+    display: inline-block;
+    float: right;
+    margin-top: 8px;
+    margin-right: 3px;
+    background: url(../img/icon/list_jt.png) no-repeat;
+}
+.list_val{
+    position: absolute;
+    width: 100px;
+    background: #fff;
+    box-shadow: 0 0 9px 0 #cbcbcb;
+    display: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 10;
+}
+.list_val>li{
+	line-height: 24px;
+    /* text-align: center; */
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: 1px solid #dcdde2;
+    color: #858585;
+    width: 85px;
+    padding-left: 10px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+.list_val>li:hover{
+	background: #3cf;
+	color: #fff;
+}
+.list_title{
+	font-size: 14px;
+	color: #858585;
+}
+.list_sel>span{
+    line-height: 22px;
+    font-size: 12px;
+    color: #DCDDE2;
+    padding: 0 5px;
+    width: 70px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

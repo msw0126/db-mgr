@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		html,
+		body {
+			height: 100%;
+			background: #bdbdbd;
+			text-align: center;
+
+		}
+
+		ul li {
+
+			list-style: none;
+		}
+
+		#name {
+			text-align: left;
+			width: 100%;
+		}
+
+		#name>li {
+			display: inline-block;
+			/*border: 1px solid black;*/
+			text-align: center;
+		}
+
+		#name>li ul li ul li,
+		#name>li>ul>li:first-child {
+			padding: 3px 5px;
+			border-left: 1px solid #dcdde2;
+			border-right: 1px solid #dcdde2;
+		}
+
+		#name>li>ul>li:first-child {
+			font-size: 16px;
+			font-weight: bold;
+			border: none;
+			background: #e7f1f8;
+			line-height: 40px;
+		}
+
+		#name>li>ul>li:last-child {
+			border-bottom: 1px solid #dcdde2;
+		}
+
+		main {
+
+			overflow: hidden;
+			overflow-x: auto;
+			white-space: nowrap;
+			background: #fff;
+			box-shadow: 0 0 7px #969696;
+			margin: auto 60px;
+			border-radius: 5px;
+			position: relative;
+			top: 60px;
+			max-height: 645px;
+			/*display: inline-block;*/
+			display: none;
+			max-width: 90%;
+		}
+
+		main::-webkit-scrollbar-thumb {
+			background-color: #bababa;
+			border-radius: 10px;
+		}
+
+		main::-webkit-scrollbar {
+			height: 10px;
+			background-color: #f1f2f3;
+		}
+
+		p {
+			height: 60px;
+			line-height: 60px;
+			border-bottom: 2px solid #2992f1;
+			font-weight: bold;
+			padding-left: 50px;
+			text-align: left;
+		}
+
+		#name {
+			/*padding: 0px 40px;*/
+			padding-bottom: 40px;
+			display: inline-block;
+		}
+
+		img {
+			margin-top: 25%;
+		}
+
+		#name>li ul li ul li:nth-child(even) {
+			background: #f6f8fa;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<p>查看报告</p> <br />
+		<p>第二行</p>
+		<ul id="name">
+		</ul>
+	</main>
+	<img src="img/save_loading.gif" alt="" />
+</body>
+
+</html>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/layer.js"></script>
+<script src="../../api.js"></script>
+<script src="../../ajax.js"></script>
+
+<script>
+	$(function () {
+		console.log(window.location.search)
+		var condition = window.location.search.split('=')[2].substring(0, 7);
+		console.log(condition);
+		if (condition === 'Feature') {
+			$.ajax({
+				type: 'get',
+				url: server + '/feature_combine/view_table' + window.location.search,
+				beforeSend: function () {
+					$("img").show();
+					$("main").hide();
+				},
+				success: function (data) {
+					function success() {
+						$("main").css('display', 'inline-block');
+						$("img").hide();
+						
+						var datas = dataBack(data).detail;
+						for (var i = 0; i < datas.length; i++) {
+							$('#name').append(
+								'<li>' +
+								'<ul>' +
+								'<li>' + datas[i].name + '</li>' +
+								'<li >' +
+								'<ul class="value">' +
+
+								'</ul>' +
+								'</li>' +
+								'</ul>' +
+								'</li>'
+							)
+							for (var j = 0; j < datas[i].value.length; j++) {
+								$("#name>li").eq(i).find('.value').append(
+									'<li>' + doubleInt(datas[i].value[j]) + '</li>'
+								)
+							}
+						}
+						var width = 0
+						//						console.log($("#name>li"))
+						$("#name>li").each(function () {
+							width += $(this).width()
+						})
+						$("#name").css('width', width + 'px')
+					}
+					backInfo(data, success)
+				}
+			})
+		} else if (condition === 'HiveRea') {
+			$.ajax({
+				type: 'get',
+				url: server + '/hive_reader/preview' + window.location.search,
+				beforeSend: function () {
+					$("img").show();
+					$("main").hide();
+				},
+				success: function (data) {
+					function success() {
+						$("main").css('display', 'inline-block');
+						$("img").hide();
+						var datas = dataBack(data).detail;
+						console.log(datas)
+						for (var i = 0; i < datas.length; i++) {
+							$('#name').append(
+								'<li>' +
+								'<ul>' +
+								'<li>' + datas[i].name + '</li>' +
+								'<li >' +
+								'<ul class="value">' +
+
+								'</ul>' +
+								'</li>' +
+								'</ul>' +
+								'</li>'
+							)
+							for (var j = 0; j < datas[i].value.length; j++) {
+								$("#name>li").eq(i).find('.value').append(
+									'<li>' + doubleInt(datas[i].value[j]) + '</li>'
+								)
+							}
+						}
+						var width = 0
+						//						console.log($("#name>li"))
+						$("#name>li").each(function () {
+							width += $(this).width()
+						})
+						$("#name").css('width', width + 'px')
+					}
+					backInfo(data, success)
+				}
+			})
+		} else if (condition === 'SelfDef') {
+			$.ajax({
+				type: 'get',
+				url: server + '/self_defined_feature/preview' + window.location.search,
+				beforeSend: function () {
+					$("img").show();
+					$("main").hide();
+				},
+				success: function (data) {
+					function success() {
+						$("main").css('display', 'inline-block');
+						$("img").hide();
+						var datas = dataBack(data).detail;
+						for (var i = 0; i < datas.length; i++) {
+							$('#name').append(
+								'<li>' +
+								'<ul>' +
+								'<li>' + datas[i].name + '</li>' +
+								'<li >' +
+								'<ul class="value">' +
+
+								'</ul>' +
+								'</li>' +
+								'</ul>' +
+								'</li>'
+							)
+							for (var j = 0; j < datas[i].value.length; j++) {
+								$("#name>li").eq(i).find('.value').append(
+									'<li>' + doubleInt(datas[i].value[j]) + '</li>'
+								)
+							}
+						}
+						var width = 0
+						//						console.log($("#name>li"))
+						$("#name>li").each(function () {
+							width += $(this).width()
+						})
+						$("#name").css('width', width + 'px')
+					}
+					backInfo(data, success)
+				}
+			})
+		} else {
+			$.ajax({
+				type: 'get',
+				url: server + '/robotx_spark/view_table' + window.location.search,
+				beforeSend: function () {
+					$("img").show();
+					$("main").hide();
+				},
+				success: function (data) {
+					function success() {
+						$("main").css('display', 'inline-block');
+						$("img").hide();
+						var datas = dataBack(data).detail;
+						for (var i = 0; i < datas.length; i++) {
+							$('#name').append(
+								'<li>' +
+								'<ul>' +
+								'<li>' + datas[i].name + '</li>' +
+								'<li >' +
+								'<ul class="value">' +
+
+								'</ul>' +
+								'</li>' +
+								'</ul>' +
+								'</li>'
+							)
+							for (var j = 0; j < datas[i].value.length; j++) {
+								$("#name>li").eq(i).find('.value').append(
+									'<li>' + doubleInt(datas[i].value[j]) + '</li>'
+								)
+							}
+						}
+						var width = 1
+						//						console.log($("#name>li"))
+						$("#name>li").each(function () {
+							width += $(this).width()
+						})
+						$("#name").css('width', width + 'px')
+					}
+					backInfo(data, success)
+				}
+			})
+		}
+
+		//判断小数还是整数
+		function doubleInt(data) {
+			if (data.toString().substr(0, 1) == '(') {
+				var datas = data.toString().replace('(', '')
+				datas = datas.replace(')', '')
+				var datasArr = datas.split('/')
+				return '(' + datasArr[0].split('.')[0] + '/' + datasArr[1].split('.')[0] + ')'
+			} else if (data.indexOf('.') == -1) {
+				return data
+			} else if (data.split('.')[1].length > 4) {
+				var tmp = 0 / 0;
+				if (isNaN(data) === true) {
+					console.log(data)
+					return data
+				}
+				return parseFloat(data).toFixed(4)
+
+			} else if (data.split('.')[1].length === 1 && data.split('.')[1] == '0') {
+				return parseInt(data)
+
+			} else {
+				return parseFloat(data).toFixed(4)
+			}
+
+		}
+	})
+
+	$(function () {
+		var map = {};
+		var arr = location.search.substr(1).split('&');
+		for (var i = 0, n = arr.length; i < n; i++) {
+			if (arr[i]) {
+				var v = arr[i].split('=');
+				map[v[0]] = decodeURIComponent(v[1]);
+			}
+		}
+		
+		if (map.component_id) {
+			var key = map.component_id.match(/^([a-zA-Z]+)\d+$/);
+			if (key && key[1]) {
+				types = {
+					'RobotXSpark': 'rbx_',
+					'FeatureCombine': 'combine_'
+				};
+
+				$("main>p").eq(0).text(map.component_id + '-组件-执行报告');
+				$("main>p").eq(1).text('Hive表为:taoshu_db_output.' + types[key[1]] + map.project_id + '_' + map.component_id);
+			}
+
+		}
+	});
+</script>

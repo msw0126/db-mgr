@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<!--	<title>databrain</title>-->
+	<title>项目</title>
+	<link rel="stylesheet" href="css/reset.css?v=2.1" />
+	<link rel="stylesheet" href="css/jquery-ui.custom.min.css?v=2.1" />
+	<link rel="stylesheet" href="css/index.css?v=2.1" />
+	<!--<link rel="stylesheet" href="css/index.css" />-->
+	<link rel="stylesheet" href="css/base.css?v=2.1" />
+	<style>
+		/*.modal{*/
+			/*display: none;*/
+			/*position: fixed;*/
+			/*top: 0;*/
+			/*left:0;*/
+			/*width:100%;*/
+			/*height:100%;*/
+			/*background: rgba(0,0,0,0.3);*/
+			/*z-index: 2;*/
+
+		/*}*/
+		.img_load{
+			margin-top:20%;
+			position: absolute;
+			top: 85px;
+			left: 48%;
+			z-index: 33333333;display: none;}
+	</style>
+</head>
+
+<body>
+	<div id="demo" style="height:100%;">
+		<div class="index-list">
+			<h2>实验项目</h2>
+			<ul class="one-list">
+				<!--
+				<li style="box-shadow: inset 0px 3px 4px #dad8d8;">
+					<div>
+						<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">Projects</span>
+					</div>
+					<ul class="nav-lists leftMenu">
+						<li><em class="index-list-icon"></em><span class="index-list-text">Example workflows</span></li>
+					</ul>
+				</li>
+-->
+				<li style="box-shadow: inset 0px 3px 4px #dad8d8;">
+					<div>
+						<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">组件</span>
+					</div>
+
+				</li>
+			</ul>
+								<ul class="nav-lists">
+						<li>
+							<div>
+								<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">输入输出</span>
+							</div>
+							<ul class="nav-listss leftMenu">
+								<!--<li type="reader" id="reader">
+									<div>
+										<em class="index-list-icon index-list-icon-reader"></em><span class="index-list-text ">CSV读取</span>
+									</div>
+								</li>-->
+								<!--<li type="writer" id="writer">
+									<div>
+										<em class="index-list-icon index-list-icon-writer"></em><span class="index-list-text ">HDFS Reader</span>
+									</div>
+								</li>-->
+								<li type="hive" id="hive" name='HiveReader'>
+									<div>
+										<em class="index-list-icon index-list-icon-reader"></em><span class="index-list-text ">Hive Reader</span>
+									</div>
+								</li>
+								<li type="SelfDefinedFeature" id="SelfDefinedFeature" name='SelfDefinedFeature'>
+									<div>
+										<em class="index-list-icon index-list-icon-reader"></em><span class="index-list-text ">csv自定义特征</span>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div>
+								<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">特征工程</span>
+							</div>
+							<ul class="nav-listss leftMenu">
+								<!--<li type="robotx" id="robotx">
+									<div>
+										<em class="index-list-icon index-list-icon-robotx"></em><span class="index-list-text ">特征发现</span>
+									</div>
+								</li>-->
+								<li type="robotx_spark" id="robotx_spark" name="RobotXSpark">
+									<div>
+										<em class="index-list-icon index-list-icon-robotx"></em><span class="index-list-text ">RobotXSpark</span>
+									</div>
+								</li>
+								<li type="combination" id="combination" name="FeatureCombine">
+									<div>
+										<em class="index-list-icon index-list-icon-robotx"></em><span class="index-list-text ">特征组合</span>
+									</div>
+								</li>
+								<!--		
+								<li>
+									<div>
+										<em class="index-list-icon index-list-icon-credit"></em><span class="index-list-text ">Credit report features</span>
+									</div>
+								</li>
+-->
+							</ul>
+						</li>
+						<li>
+							<div>
+								<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">有监督学习</span>
+							</div>
+							<ul class="nav-listss leftMenu">
+								<li type="learn" id="learn" name="AtomLearn">
+									<div>
+										<em class="index-list-icon index-list-icon-learn"></em><span class="index-list-text ">Atom建模学习</span>
+									</div>
+								</li>
+
+								<li type="act" id="act" name="AtomAct">
+									<div>
+										<em class="index-list-icon index-list-icon-act"></em><span class="index-list-text">Atom建模预测</span>
+									</div>
+								</li>
+								<li type="test" id="test" name="AtomTest">
+									<div>
+										<em class="index-list-icon index-list-icon-test"></em><span class="index-list-text">Atom建模测试</span>
+									</div>
+								</li>
+								<!--<li type="exported" id="maintain" name="ExportModel">
+									<div>
+										<em class="index-list-icon index-list-icon-maintian"></em><span class="index-list-text">导出模型</span>
+									</div>
+								</li>-->
+							</ul>
+						</li>
+						<!--<li>
+							<div>
+								<i class="index-list-jt"></i><em class="index-list-icon"></em><span class="index-list-text">模型部署</span>
+							</div>
+							<ul class="nav-listss leftMenu">-->
+						<!--<li type="pmml" id="pmml">
+									<div>
+										<em class="index-list-icon index-list-icon-pmml"></em><span class="index-list-text ">模型发布</span>
+									</div>
+								</li>-->
+						<!--</ul>
+						</li>-->
+					</ul>
+		</div>
+		<div class="index-content">
+			<div class="index-content-head">
+				<ul class="content-center-sub">
+					<li id="c-save">
+						<i class="ico-saves"></i>
+						<span>保存</span>
+					</li>
+					<li id="c_dos">
+						<i class="icon-dos"></i>
+						<span>执行</span>
+					</li>
+					<li id="c_dos_continue">
+						<i class="icon-dos"></i>
+						<span>继续执行</span>
+					</li>
+					<!--<li id="c_deploy">
+					<i class="icon-deploys"></i>
+					<span>导出模型</span>
+					</li>-->
+					<li id="exit_html">
+						<i class="icon-exits"></i>
+						<span>退出</span>
+					</li>
+				</ul>
+				<div id="help_parent" onclick="window.open('help.html')">
+				<a id="help"></a>
+					<span id="">帮助文档</span>
+				</div>
+
+			</div>
+			<div class="index-content-cavn" id="container">
+
+			</div>
+			<div id="data_val" data="" style="display:none;"></div>
+		</div>
+		<div id="index_right" class="index-right">
+
+		</div>
+	</div>
+	<div id="shadowBody"></div>
+	<div id="runContent">
+		<p id="runContent_title">请开始配置参数</p>
+		<ul id="runContent_content">
+			<li>
+				<div>驱动器内存<input type="text" id="driver_memory" style="margin-left:70px;" />G</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，需要的驱动器内存，对应spark-submit中的 driver-memory</p>
+			</li>
+			<li>
+				<div>执行器个数<input type="text" id="num_executor" style="margin-left:70px;"/>个</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，需要的执行器个数，对应spark-submit中的 num-executors</p>
+			</li>
+			<li>
+				<div>执行器内存<input type="text" id="executor_memory" style="margin-left:70px;"/>G</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，需要的执行器内存,对应spark-submit中的 executor-memory</p>
+			</li>
+
+			<li>
+				<div>执行器CPU个数<input type="text" id="executor_cores" style="margin-left:37px;"/>个</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，每个执行器可用的 cpu个数，对应spark-submit中的 executor_cores</p>
+			</li>
+			<li>
+				<div>驱动器栈内存大小<input type="text" id="driver_perm"/>M</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，驱动器java虚拟机最大非堆内存，对应spark-submit的conf参数中的spark.driver.extraJavaOptions=-XX:MaxPermSize</p>
+			</li>
+			<li>
+				<div>执行器栈内存大小<input type="text" id="executor_perm"/>M</div>
+				<span class="question"></span>
+				<span class="error1">请输入正整数</span>
+				<p>在Spark环境下运行某个任务时，执行器java虚拟机最大非堆内存，对应spark-submit的conf参数中的spark.executor.extraJavaOptions=-XX:MaxPermSize</p>
+			</li>
+
+		</ul>
+		<div id="runContent_button">
+			<button type="button" id="cancel">取消</button>
+			<button type="button" id="save">保存</button>
+		</div>
+	</div>
+	<button id="executor_button">查看执行状态</button>
+	<button id="stop_button">停止执行</button>
+	<div id="executor">
+		<p><span>组件执行状态</span><em id="close"></em></p>
+		<div id="executor_content">
+		<ul id="executor_list">
+			<li>
+				<ul>
+					<li class="componentsName">组件标识</li>
+					<li class="componentsStatus">组件状态</li>
+					<li class="startTime">开始时间</li>
+					<li class="endTime">结束时间</li>
+					<li class="error_code">错误代码</li>
+					<li class="detail_info">详细信息</li>
+					<li class="detail_log">查看明细日志</li>
+				</ul>
+			</li>
+		</ul>			
+		</div>
+	</div>
+	<div id="detail">
+		<div id="detail_one">
+			<p><span></span>详细信息</p>
+			<em id="close_new"></em>
+		</div>
+		<div id="detail_two"></div>
+	</div>
+	<img src="img/save_loading.gif" alt="" class="img_load"/>
+	<!--<div class="modal" id="modal">-->
+
+	<!--</div>-->
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!--<script src="js/api.js"></script>-->
+<script src="../../api.js"></script>
+<script src="../../ajax.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jsPlumb-2.2.8.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/indexui.js"></script>
+<script src="js/uuid.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		setLeftMenu();
+		//监听新的连接
+		instance.bind("connection", function(connInfo, originalEvent) {
+			var modeltype = $('#' + connInfo.sourceId).attr('modeltype');
+			//判断hivereader组件连接终点是否一致，再判断表名是否一致
+			if($('#' + connInfo.sourceId).hasClass('hive')) {
+				$('#' + connInfo.sourceId).attr('target', connInfo.targetId)
+			}
+//			init(connInfo.connection);
+			//判断组件可以连什么不可以连什么
+			if($('#' + connInfo.targetId).attr('modeltype') === 'robotx_spark') {
+				
+				if($('#' + connInfo.targetId).attr('souid').split(',').length>5){
+					instance.detach(connInfo.connection);
+					return
+				}
+				if($('#' + connInfo.sourceId).attr('compid').substring(0, 10) === 'HiveReader') {
+					//如果新连入的hive组件的id已存在目标组件的souid里面，那么阻止该连线
+					if($('#' + connInfo.targetId).attr('souid').indexOf($('#' + connInfo.sourceId).attr('compid'))!=-1){
+						instance.detach(connInfo.connection);
+						return
+					}
+					init(connInfo.connection);
+				} else {
+//					alert('robotx只能连接hivereader组件')
+					instance.detach(connInfo.connection);
+					return
+				}
+			} else if($('#' + connInfo.targetId).attr('modeltype') === 'combination') {
+				//自定义特征组件
+				var souid_arr = $('#' + connInfo.targetId).attr('souid').split(',');
+				if(modeltype === 'robotx_spark' || modeltype === 'SelfDefinedFeature') {
+					if(souid_arr.length>1){
+						instance.detach(connInfo.connection);
+						return
+					}else{
+						if(souid_arr.length==1&&souid_arr[0]!=''){
+							if(souid_arr[0].substring(0,6).toLowerCase()==modeltype.substring(0,6).toLowerCase()){
+									instance.detach(connInfo.connection);
+								return
+							}
+						}
+							init(connInfo.connection);
+						
+					}
+					
+				} else {
+					instance.detach(connInfo.connection);
+					return
+				}
+			} else if($('#' + connInfo.targetId).attr('modeltype') === 'learn') {
+				var souid_arr = $('#' + connInfo.targetId).attr('souid').split(',');
+				
+				if(modeltype === 'robotx_spark' || modeltype === 'hive' || modeltype==='combination') {
+
+					if(souid_arr.length === 1 && souid_arr[0] === '') {
+						init(connInfo.connection);
+						$('#' + connInfo.targetId).attr('sourceId', $('#' + connInfo.sourceId).attr('id'))
+					} else {
+//						alert('Atom建模学习只能有一个输入源')
+						instance.detach(connInfo.connection);
+						return
+					}
+				} else {
+//					alert(modeltype+'组件不能连接Atom建模学习组件')
+					instance.detach(connInfo.connection);
+					return
+				}
+			} else if($('#' + connInfo.targetId).attr('modeltype') === 'act') {
+				var souid_arr = $('#' + connInfo.targetId).attr('souid').split(',');
+				if(modeltype === 'learn') {
+					var id = $("#" + connInfo.sourceId).attr('sourceid');
+					 type = $('#' + id).attr('modeltype');
+					init(connInfo.connection);
+				}else{
+					if(souid_arr.length>1){
+//						alert('Atom建模预测除Atom建模学习只能有一个输入源')
+						instance.detach(connInfo.connection);
+						return						
+					}
+					if(souid_arr.length === 1 && souid_arr[0] === '' ||souid_arr.length === 1 && souid_arr[0].substring(0,9) === 'AtomLearn') {
+						if(souid_arr.length === 1 && souid_arr[0] === ''){
+							alert('请先连接AtomLearn组件')
+							instance.detach(connInfo.connection);
+						}else{
+							if(modeltype!==type){
+//								alert('Atom建模预测除Atom建模学习只能连接'+type+'组件')
+								instance.detach(connInfo.connection);
+							}else{
+								init(connInfo.connection);
+							}
+						}
+					}
+				} 
+			} else if($('#' + connInfo.targetId).attr('modeltype') === 'test') {
+				var souid_arr = $('#' + connInfo.targetId).attr('souid').split(',');
+				if(modeltype === 'act') {
+					init(connInfo.connection);
+				} else {
+					if(modeltype === 'robotx_spark' || modeltype === 'hive' || modeltype==='combination'){
+						if(souid_arr.length === 1 && souid_arr[0] === '' ||souid_arr.length === 1 && souid_arr[0].substring(0,7) === 'AtomAct' ) {
+							init(connInfo.connection);
+						} else {
+	//						alert('Atom建模测试除Atom建模预测外只能有一个输入源')
+							instance.detach(connInfo.connection);
+							return
+						}
+					}else{
+						instance.detach(connInfo.connection);
+						return
+					}	
+				}
+			}else if($('#' + connInfo.targetId).attr('modeltype') === 'exported') {
+				var souid_arr = $('#' + connInfo.targetId).attr('souid').split(',');
+				if(modeltype === 'learn') {
+					if(souid_arr.length==1&&souid_arr[0]===""){
+						init(connInfo.connection);
+					}else{
+						instance.detach(connInfo.connection);
+					}
+					
+				} else {
+					instance.detach(connInfo.connection);	
+				}
+			}else{
+				init(connInfo.connection);
+			}
+
+		});
+		instance.bind("dblclick", function(conn, originalEvent) {
+			var source_id = $(conn.source).attr('compid');
+			var el = $(conn.target).attr('souid');
+			var source_idl = source_id + ',';
+			var source_idr = ',' + source_id;
+			//如果是learn组件删除接下来流程连线
+			if($(conn.target).attr('modeltype')=='learn'){
+				var id = $(conn.target).attr('id')
+				$(conn.target).attr('souid','')
+				var component_id =$(conn.target).attr('compid') ;
+				var acts = $(".act");
+				instance.detachAllConnections($("#"+id+""), '')
+				var act_component = ''
+				for(var i=0;i<acts.length;i++){
+					if(acts.eq(i).attr('souid').indexOf(component_id)!=-1){
+						var idss = acts.eq(i).attr('id');
+						act_component = acts.eq(i).attr('compid');
+						instance.detachAllConnections($("#"+idss+""))
+						acts.eq(i).attr('souid','')
+					}
+				};
+				var tests = $(".test")
+				for(var i=0;i<tests.length;i++){
+					if(tests.eq(i).attr('souid').indexOf(act_component)!=-1){
+						var idss = tests.eq(i).attr('id');
+						instance.detachAllConnections($("#"+idss+""))
+						tests.eq(i).attr('souid','')
+					}
+				};
+			}
+			if(el.indexOf(source_idl) != -1 && el.indexOf(source_idr) != -1) {
+				var els = el.replace(',' + source_id, '');
+				$(conn.target).attr('souid', els);
+			} else if(el.indexOf(source_idl) == -1 && el.indexOf(source_idr) != -1) {
+				var els = el.replace(',' + source_id, '');
+				$(conn.target).attr('souid', els);
+			} else if(el.indexOf(source_idl) != -1 && el.indexOf(source_idr) == -1) {
+				var els = el.replace(source_id + ',', '');
+				$(conn.target).attr('souid', els);
+			} else if(el.indexOf(source_idl) == -1 && el.indexOf(source_idr) == -1) {
+				var els = el.replace(source_id, '');
+				$(conn.target).attr('souid', els);
+			}
+			instance.detach(conn);
+		});
+		//阻止自己连自己
+		instance.bind("beforeDrop", function (info) {
+		// console.log("before drop: " + info.sourceId + ", " + info.targetId);
+		    if (info.sourceId === info.targetId) { 
+		        return false;
+		    } else {
+		        return true;
+		    }
+		});
+		//添加连线时候的组件souid值 
+		function init(conn) {
+			var sourceName = $("#" + conn.sourceId).attr("compid");
+			var targetName = $("#" + conn.targetId).attr("compid");
+			var sou = $("#" + conn.targetId).attr("souid");
+			if(sou == '') {
+				$("#" + conn.targetId).attr("souid", sourceName);
+			} else {
+				$("#" + conn.targetId).attr('souid', sou + ',' + sourceName);
+			};
+
+		};
+	});
+</script>
+
+</html>

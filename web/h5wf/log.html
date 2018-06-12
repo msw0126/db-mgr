@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body,html{
+				height: 100%;
+				width: 100%;
+			}
+			#loading{
+			    height: 100%;
+			    text-align: center;
+			    background: black;
+			    opacity: 0.3;
+			    display: none;
+			}
+			img{
+				    /* margin-top: 30%; */
+			    position: absolute;
+			    top: 0px;
+			    top: 48%;
+			    left: 48%;
+			    display: none;
+			}
+			#container{
+				padding-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			
+		</div>
+		<div id="loading">
+			
+		</div>
+		<img src="img/save_loading.gif" alt="" />
+	</body>
+</html>
+<script src="js/jquery-2.1.4.min.js?v=2.1"></script>
+<script src="../../api.js?v=2.1"></script>
+<script src="../../ajax.js?v=2.1"></script>
+<script src="js/layer.js?v=2.1"></script>
+<script>
+	$(function(){
+		$.ajax({
+			type:'get',
+			url:server+'/executor/get_log'+ window.location.search,
+			beforeSend:function(){
+				$("#loading").show();
+				$("img").show();
+			},
+			success:function(data){
+				function success(){
+					var datas = dataBack(data).detail;
+					datas = datas.replace(/\n/g,'<br>')
+					$("#container").append(datas);
+					$("#loading").hide()
+					$("img").hide();
+				}
+				backInfo(data,success)
+			},
+			error:function(data){
+				layer.msg('接口请求失败');
+			}
+		})		
+	})
+
+</script>

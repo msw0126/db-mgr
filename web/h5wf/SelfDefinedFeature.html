@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="css/base.css?v=2.1">
+<link rel="stylesheet" href="css/SelfDefinedFeature.css?v=2.1" />
+
+<div class="right-main" id="csv-SelfDefinedFeature" data="">
+	<div class="right-head">参数设置</div>
+	<div class="right-content">
+		<!--<form id="form_reader" method="post" style="display:none;">-->
+			<input type="file" name="file" id="files" value="" style="display:none;">
+			<!--<input type="hidden" name="component_id" id="componentID" value="">-->
+			<!--<input type="hidden" name="project_id" value="" id="proid">-->
+			<!--<input type="hidden" name="fileName" id="fileName" value="">-->
+			<!--<input type="hidden" name="separator" value=",">-->
+		<!--</form>-->
+		<ul class="reader-right-content_ul">
+			<li>
+				<label>csv文件<span class="c-csv-again" style="margin-top:0px !important;">重新上传</span></label>
+				<div class="c-csv files_name img_upload">上传文件</div><em class=""></em>
+				<em class="edit_fields"></em>
+			</li>
+
+			<div class="c_save_reader">保存</div>
+		</ul>
+		<div id="alert_table">
+			<p class="table_name">请<span style="color: red;font-weight: bold;">确认</span><span class="tableTitle">user_info</span>表中的数据类型</p>
+			<ul class="table_title">
+				<li class="fields_sel"><input type="checkbox" checked="true" id="all-Sselect"></li>
+				<li class="fields_one">字段名</li>
+				<li class="fields_two">字段类型</li>
+
+
+
+				<li class="fields_three">查看数据（仅显示前三行）</li>
+				<li class="fields_date">日期</li>
+
+			</ul>
+			<ul class="table_fields">
+
+			</ul>
+			<div class="table_footer">
+				<button id="hive_table_cancel">取消</button>
+				<button id="hive_table_save">保存</button>
+			</div>
+		</div>
+	</div>
+	<div class="shadow"></div>
+</div>
+</div>
+<script src="js/SelfDefinedFeature.js?v=2.1"></script>

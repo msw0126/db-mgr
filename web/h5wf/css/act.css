@@ -1,0 +1,88 @@
+.act-factor {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 48px;
+    list-style: none;
+    clear: both;
+    position: relative;
+    height: auto;
+}
+.act-factor>label {
+    color: #858585;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.nav-list-act {
+    margin-top: 10px;
+    background: #fff;
+    height: 24px;
+    border: 1px solid #dcdde2;
+    border-radius: 2px;
+}
+.nav-list-act>em {
+    font-style: normal;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    padding-left: 8px;
+    line-height: 20px;
+}
+.nav-list-act>i {
+    width: 11px;
+    height: 5px;
+    display: block;
+    float: right;
+    background: url(../../img/icon/list_jt.png) no-repeat;
+    margin-top: 9px;
+    margin-right: 7px;
+}
+.act-factor>ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 100px;
+    left: 0px;
+    padding: 0px;
+    border: 1px solid #dcdde2;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 5px #cbcbcb;
+    box-shadow: 0 0 9px 0px #cbcbcb;
+}
+.act-factor>ul>li {
+    text-align: left;
+    color: #858585;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #dcdde2;
+    width: 168px;
+    background: #fff;
+    padding-left: 10px;
+}
+.c-act-save {
+    width: 170px;
+    height: 24px;
+    margin: 0 auto;
+    border: 1px solid #33ccff;
+    border-radius: 2px;
+    color: #33ccff;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    background: #fff;
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+.c-act-save:hover{
+    background: #33CCFF;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-list-li li:hover{
+	background: #33CCFF;
+	color: #ffffff;
+}

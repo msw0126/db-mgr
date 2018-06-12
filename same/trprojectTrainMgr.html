@@ -1,0 +1,253 @@
+<link rel="stylesheet" href="css/spectrum.css?v=2.1" />
+<link rel="stylesheet" href="css/my_info.css?v=2.1" />
+<link rel="stylesheet" href="css/pagination.css?v=2.1" />
+<div>
+	<p class="main-content-p"><span>我的实验</span><span class="title-second">></span><span class='title-second'>编辑分类</span><button type="button">新增分类</button></p>
+	<div id="project_list">
+		<div class="shiyan-header">
+			<div>
+				<span>项目分类</span>
+				<ul class="lei-list">
+					<li class="fenlei exit">不限</li>
+					<li class="exit"></li>
+					<!--<li>反欺诈<input type="hidden"  value="001"/></li>
+					<li>贷前<input type="hidden"  value="002"/></li>
+					<li>贷后<input type="hidden"  value="003"/></li>-->
+				</ul>
+			</div>
+			<div id="edit_type">
+				<img src="img/icon_revise_02.png" alt="" />
+				<span>编辑分类</span>
+			</div>
+		</div>
+		<div class="shiyan-key">
+			<span>搜索栏</span>
+			<div class="shiyan-search">
+				<input type="text" placeholder="请输入项目名或关键词" />
+				<span class="icon iconfont icon-sousuo"></span>
+			</div>
+			<!--<span class="shiyan-sousuo">搜&nbsp;索</span>-->
+		</div>
+		<div class="shiyan-add">
+			<span class="icon iconfont icon-xinjian"></span><span>新建项目</span>
+		</div>
+		<div class="shiyan-main">
+			<ul class="shiyan-ul">
+				<li class="shiyan-title">
+					<ul>
+						<li>项目名</li>
+						<li>项目类型</li>
+						<!--<li>项目编号</li>-->
+						<li style="visibility: hidden;">创建人</li>
+						<li>创建时间</li>
+						<li>操作</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="M-box3"></div>
+	</div>
+	<div id="project_type">
+		<div class="shiyan-main">
+			<ul class="project_type-ul">
+				<li class="shiyan-title project_type_title">
+					<ul>
+						<li>分类名</li>
+						<li>分类编码</li>
+						<!--<li>项目编号</li>-->
+						<li>状态</li>
+						<li>颜色</li>
+						<li>操作</li>
+					</ul>
+				</li>
+				<!--<li class=" ">
+					<ul class="project-ul-ul">
+						<li class="shiyan-li_first project-li_first"><span>贷前</span><input type="hidden" value=""></li>
+						<li class=" project-li_second"><span>ABCGDGDGDG</span><input class="" type="hidden" value="1"></li>
+						<li class="shiyan-li_fourth project-li_fourth"><span class="icon iconfont icon-wode"></span><span>正常</span></li>
+						<li class="shiyan-li_five project-li_five"><span></span><span class="border_tro_right"></span></li>
+						<li class=" project-li_six">
+							<ul>
+								<li>
+									<div><span class="icon iconfont icon-xiugai"></span><span>修改</span></div>
+								</li>
+								<li>
+									<div><span class="icon iconfont icon-shanchu-"></span><span>删除</span></div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>-->
+			</ul>
+		</div>
+		<button type="button" class="type-back">返&nbsp;&nbsp;&nbsp;回</button>
+	</div>
+	<!--<div id='page_train'>
+        <p style="font-size:18px"></p><br />
+        <div class="page_div1"></div>
+   </div>-->
+
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width:460px ;">
+			<form class="add-html" style="width: 460px; height: 538px;">
+
+				<h2>新建项目</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<div class="add-form">
+					<label for="name" class="label_name">项目名称</label><input name="name" id="name" type="text" placeholder="请输入项目名称" />
+					<span class="tishi_myModel">此项为必填</span>
+					<div style="position: relative;">
+						<label for="project_type_list" class="label_type">项目分类</label>
+						<div class="project_list_select"><span></span><span></span><i class="icon iconfont icon-icon-weixialashi"></i><input type="hidden" value="" /><input type="hidden" value="" /></div>
+						<ul id="project_type_list">
+
+						</ul>
+					</div>
+					<label for="miaoshu" class="label_miaoshu">项目描述</label><textarea name="describe" id="miaoshu" cols="30" rows="10" placeholder="请输入描述..."></textarea>
+					<span class="tishi_myModel1">此项为必填</span>
+					<input type="button" value="确&nbsp;&nbsp;&nbsp;定" />
+
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 460px;">
+			<form class="add-html new_form" style="width: 460px; height: 538px;">
+				<h2>修改项目</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<div class="add-form">
+					<label for="name_new" class="label_name">项目名称</label><input name="name" id="name_new" type="text" placeholder="请输入项目名称" /><span class="tishi_myModel">此项为必填</span>
+					<!--<input type="text" name="projectId" />-->
+					<!--<div id="fenlei_new">项目分类<span class="fenlei_span">贷前</span><input type="hidden" value="1" /><span>贷后</span><input type="hidden" value="2" /></div>-->
+					<div style="position: relative;">
+						<label for="project_type_list1" class="label_type">项目分类</label>
+						<div class="project_list_select1"><span></span><span></span><i class="icon iconfont icon-icon-weixialashi"></i><input type="hidden" value="" /><input type="hidden" /></div>
+						<ul id="project_type_list1">
+						</ul>
+					</div>					
+					<label for="miaoshu_new" class="label_miaoshu">项目描述</label><textarea name="describe" id="miaoshu_new" cols="30" rows="10" placeholder="请输入描述..."></textarea><span class="tishi_myModel1">此项为必填</span>
+					<input type="button" value="确&nbsp;&nbsp;&nbsp;定" />
+
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+<!--添加分类弹框-->
+<div class="modal fade" id="myModal_type" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 460px;">
+			<div class="add-html" style="width: 460px;height: 528px;">
+				<h2>新建分类</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<form action="" class="add-form user-form type-form">
+					<label for="type_name">分类名称</label><input type="text" id="type_name" maxlength="4" placeholder="点击输入类型名称" required="" /><br /><span class="tishi">此项为必填</span>
+					<!--<span class="tishi">此项为必填</span>-->
+					<label for="type_code">分类编码</label><input type="text" id="type_code" maxlength="10" placeholder="点击输入类型编码" maxlength="11" /><br />
+					<span class="tishi">此项为必填</span>
+					<label for="">分类状态</label>
+					<ul id="type_status">
+						<li><span class="fenlei_span">正常</span><input type="hidden" value="1" /></li>
+						<li><span>失效</span><input type="hidden" value="0" /></li>
+					</ul>
+					<label for="">分类颜色</label>
+					<input type="text" id="choose" />
+					<!--<div class="type_select"><span></span><input type="text" id="choose" /><i class="icon iconfont icon-icon-weixialashi"></i></div>-->
+					<input type="button" id="type_sub" value="确&nbsp;&nbsp;&nbsp;定" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_type_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 460px;">
+			<div class="add-html" style="width: 460px;height: 528px;">
+				<h2>修改分类</h2>
+				<span class="icon iconfont icon-guanbi1" data-dismiss="modal"></span>
+				<form action="" class="add-form user-form type-form">
+					<label for="type_name_edit">分类名称</label><input type="text" id="type_name_edit" placeholder="点击输入类型名称" required="" maxlength="4"/><br /><span class="tishi">此项为必填</span>
+					<label for="type_code_edit">分类编码</label><input type="text" id="type_code_edit" placeholder="点击输入类型编码" maxlength="11" readonly="readonly"/><br /><span class="tishi">请输入正确的编码格式</span>
+					<label for="">分类状态</label>
+					<ul id="type_status_edit">
+						<li><span class="fenlei_span">正常</span><input type="hidden" value="1" /></li>
+						<li><span>失效</span><input type="hidden" value="0" /></li>
+					</ul>
+					<br />
+					<span class="tishi">您还有相关实验项目，不能选择该分类</span>
+					<label for="">分类颜色</label>
+					<input type="text" id="choose1" />
+					<!--<div class="type_select"><span></span><input type="text" id="choose" /><i class="icon iconfont icon-icon-weixialashi"></i></div>-->
+					<input type="button" id="type_sub_edit" value="确&nbsp;&nbsp;&nbsp;定" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--删除弹框-->
+<div class="modal fade" id="myModal_alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="confirm_alert">
+				<p class="confirm_tishi">
+					<span>提示</span>
+					<span class="icon iconfont icon-guanbi1 guanbi" data-dismiss="modal"></span>
+				</p>
+				<p class="confirm_content">您正在删除实验项目<span>1</span>，您确定该操作吗？</p>
+				<div class="submit_button">
+					<button class="quxiao" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+					<button class="queding">确&nbsp;&nbsp;定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--提交弹框-->
+<div class="modal fade" id="myModal_alert_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="confirm_alert">
+				<p class="confirm_tishi">
+					<span>提示</span>
+					<span class="icon iconfont icon-guanbi1 guanbi" data-dismiss="modal"></span>
+				</p>
+				<p class="confirm_content">您正在提交实验项目<span>1</span>，您确定该操作吗？</p>
+				<div class="submit_button">
+					<button class="quxiao" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+					<button class="queding">确&nbsp;&nbsp;定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal_alert1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="confirm_alert">
+				<p class="confirm_tishi">
+					<span>提示</span>
+					<span class="icon iconfont icon-guanbi1 guanbi" data-dismiss="modal"></span>
+				</p>
+				<p class="confirm_content1">您正在删除实验项目<span>1</span>，相关实验项目会被删除，您确定该操作吗？</p>
+				<div class="submit_button">
+					<button class="quxiao" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+					<button class="queding">确&nbsp;&nbsp;定</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script src="script/jquery.js"></script>
+<script src="script/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="script/jquery.pagination.js"></script>
+<script src="script/spectrum.js"></script>
+<script src="js/shiyan.js?v=2.1"></script>

@@ -1,0 +1,93 @@
+.content {
+	height: auto;
+	width: 1000px;
+	margin: auto;
+}
+
+.content .con-h4 {
+	padding-left: 15px;
+	font-size: 18px;
+	border-left: 7px solid #2992F1;
+	height: 21px;
+	width: 100%;
+	line-height: 21px;
+	margin-bottom: 14px;
+}
+
+.content .section {
+	margin-top: 40px;
+}
+
+.content .section .section-d {
+	border-top: 2px solid #2992F1;
+	font-size: 12px;
+}
+
+.content .section .sample_survey div span {
+	height: 40px;
+	background: #DCEBFF;
+	line-height: 40px;
+	display: block;
+	float: left;
+	margin-right: 50px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 13px;
+}
+
+.content .section .score_distribution #score_main {
+	height: 360px;
+	width: 720px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.content .section .score_distribution #pn_sample_size {
+	height: 360px;
+	width: 540px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#search {
+	width: 420px;
+	height: 31px;
+	line-height: 31px;
+	background: #FFB955;
+	margin-bottom: 20px;
+	font-size: 13px;
+	padding-left: 20px;
+	display: inline-block;
+}
+
+#search input {
+	width: 81px;
+	margin: auto 10px;
+}
+
+#search span {
+	font-size: 12px;
+	color: #858585;
+}
+
+.content .section .section-d #forecast_scoring {
+	height: 40px;
+	width: 240px;
+	background: #2992F1;
+	color: #ffffff;
+	font-size: 15px;
+	text-align: center;
+	line-height: 40px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+.error{
+	display: none;
+	color: red;
+}

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/top.css?v=2.1" />
+		<link rel="stylesheet" href="css/reset.css?v=2.1" />
+		<link rel="stylesheet" href="css/help.css?v=2.1" />
+	</head>
+
+	<body>
+		<div class="top">
+			<ul class="top-l pull-left">
+				<!--<li class="pull-left"><img src="img/img/t_06.png"><span class="s1">控制台</span><span class="bor pull-right"></span></li>-->
+				<li class="pull-left"><img src="img/img/t_03.png"><span class="s2">DataBrain帮助文档</span></li>
+			</ul>
+			<!--<ul class="top-r pull-right">
+        <li><img src="img/img/tr_03.png"><span>实验项目1</span></li>
+        <li><img src="img/img/tr_05.png"><span>SUN</span></li>
+        <li><img src="img/img/tr_07.png"><span>2017-11-21 12:23</span></li>
+    </ul>-->
+		</div>
+		<main>
+			<ul id="help_title">
+				<li class="left">
+					<a data-to="machine_study">机器学习算法</a>
+				</li>
+				<li class="right">
+					<a data-to="LR">逻辑回归(LR:logoistic regression)</a>
+				</li>
+				<li class="right">
+					<a data-to="DL">深度学习(DL:deep learning)</a>
+				</li>
+				<li class="right">
+					<a data-to="RF">随机森林(RF:random fosrest)</a>
+				</li>
+				<li class="right">
+					<a data-to="NB">朴素贝叶斯(NB:naïve bayes)</a>
+				</li>
+				<li class="right">
+					<a data-to="GBM">梯度提升算法(GBM)</a>
+				</li>
+				<li class="left">
+					<a data-to="yuzhi">基于阈值的评估指标</a>
+				</li>
+				<li class="right">
+					<a data-to="hx">混肴矩阵和评估指标</a>
+				</li>
+				<li class="left">
+					<a data-to="combition">综合评估指标</a>
+				</li>
+				<li class="right">
+					<a data-to="roc"> ROC 曲线和 AUC</a>
+				</li>
+				<li class="right">
+					<a data-to="recall"> Precision/Recall 曲线</a>
+				</li>
+				<li class="right">
+					<a data-to="lift"> Lift 曲线</a>
+				</li>
+				<li class="right">
+					<a data-to="gain">Cumulative Gain 曲线 </a>
+				</li>
+				<li class="right">
+					<a data-to="ks">K-S 曲线 </a>
+				</li>
+				<li class="right">
+					<a data-to="score">SCORE分组统计 </a>
+				</li>
+				<li class="right">
+					<a data-to="topn">TOPN 维度统计 </a>
+				</li>
+				<li class="right">
+					<a data-to="exported">模型部署 </a>
+				</li>
+			</ul>
+			<div id="right_content">
+				<div id="machine_study">
+					<p class="h1 diffH1">机器学习算法</p>
+					<div id="LR">
+						<p class="h2">逻辑回归</p>
+						<p class="text">
+							<span class="explain">是一种有监督的统计学习方法，将线性公式（y=βx+b）与sigmod函数($ 1 \over 1+e^x $)结合，得到逻辑回归函数(y=$ 1 \over 1+e^{\beta x+b } $  )，用于对样本进行分类，它的预测结果是某样本属于正类的可能性是多少。具体参见<a href="https://en.wikipedia.org/wiki/Logistic_regression"  target="view_window">https://en.wikipedia.org/wiki/Logistic_regression</a>。</span><br />
+Atom中算法内部进行如下操作：<br />
+（1）one-hot；<br />
+（2）缺失值填充，均值；<br />
+（3）去除共线性；<br />
+（4）变量缩放，标准化。此外，因为可以进行L1、L2正则化，所以可以不进行变量筛选 。用lr算法时，不建议进行欠抽样。
+
+						</p>
+						<p class="h3">算法默认参数</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">是否对全量做统计、是否做抽样统计</p>
+								<p class="text">
+									<span>
+										可选择是否做全量统计，是否做抽样统计。数值变量统计最大、最小、中位数、均值、方差，因子型变量统计各变量的不同因子及对应样本数，可选择全量或随机抽样统计，或不进行统计。<br />
+设置“cal_statics_universal”为true时，进行全量统计；“cal_statics_sampling”设为true时，进行抽样统计（atom根据数据量决定抽样比例），若“cal_statics_sampling”设置成小于1的小数，表示按该比例抽样，若“cal_statics_sampling”设置成大于1的整数，表示按此样本量抽样；都为false，不进行统计。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">特征最大缺失值比例</p>
+								<p class="text">
+									<span>
+										若变量的缺失记录大于所设最大缺失比率，就删除变量。对应配置文件中的“max_variable_miss_prop”。类型：float，范围：[0.7,1.0]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">最大因子数</p>
+								<p class="text">
+									<span>
+										若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。类型：int，范围：[0,1000]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">是否抽样</p>
+								<p class="text">
+									<span>
+										可选择是否抽样。若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。设置“sampling_method”设 null，不抽样。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">欠抽样比例</p>
+								<p class="text">
+									<span>
+										可选择是否欠抽样，比例可选，默认值5（多类/少类） 。设置“sampling_method”为“undersampling”时，进行欠抽样，比例为“unbalanced_cutoff”的值。类型：int，范围：[2,∞）。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">k折交叉验证</p>
+								<p class="text">
+									<span>
+										若要进行 k-fold交叉验证，设置“cv_k”值大于等于2，否则训练时按 7/3 拆分训练、验证集。类型：int，范围：[1,5]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h3">主要调整参数</p>
+								<p class="h4">alpha</p>
+								<p class="text">
+									<span>
+									平衡L1和L2正则化比例，alpha取1代表只进行L1正则化（Lasso）， alpha取0代表只进行L2正则化（Ridge）。类型：float，范围：[0,1.0]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">lambda</p>
+								<p class="text">
+									<span>
+									调节正则化幅度，如果lambda取0, 则不进行正则化，此时alpha参数也就没用。类型：float，范围：[0,1.0]。
+									</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div id="DL">
+						<p class="h2">深度学习</p>
+						<p class="text">
+							<span class="explain">深度学习是一种含多隐层的多层感知器（类似深层神经网络）。它通过组合低层特征形成更加抽象的高层表示属性类别或特征，以发现数据的分布式特征表示。具体参见<a href="https://baike.baidu.com/item/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/3729729?fr=aladdin"  target="view_window">https://baike.baidu.com/item/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/3729729?fr=aladdin</a>，<a href="https://en.wikipedia.org/wiki/Deep_learning"  target="view_window">https://en.wikipedia.org/wiki/Deep_learning</a>。</span>
+						</p>
+												<p class="h3">算法默认参数</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">是否对全量做统计、是否做抽样统计</p>
+								<p class="text">
+									<span>
+										可选择是否做全量统计，是否做抽样统计。数值变量统计最大、最小、中位数、均值、方差，因子型变量统计各变量的不同因子及对应样本数，可选择全量或随机抽样统计，或不进行统计。<br />
+设置“cal_statics_universal”为true时，进行全量统计；“cal_statics_sampling”设为true时，进行抽样统计（atom根据数据量决定抽样比例），若“cal_statics_sampling”设置成小于1的小数，表示按该比例抽样，若“cal_statics_sampling”设置成大于1的整数，表示按此样本量抽样；都为false，不进行统计。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">特征最大缺失值比例</p>
+								<p class="text">
+									<span>
+										若变量的缺失记录大于所设最大缺失比率，就删除变量。对应配置文件中的“max_variable_miss_prop”。类型：float，范围：[0.7,1.0]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">最大因子数</p>
+								<p class="text">
+									<span>
+										若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。类型：int，范围：[0,1000]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">是否抽样</p>
+								<p class="text">
+									<span>
+										可选择是否抽样。若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。设置“sampling_method”设 null，不抽样。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">欠抽样比例</p>
+								<p class="text">
+									<span>
+										可选择是否欠抽样，比例可选，默认值5（多类/少类） 。设置“sampling_method”为“undersampling”时，进行欠抽样，比例为“unbalanced_cutoff”的值。类型：int，范围：[2,∞）。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">k折交叉验证</p>
+								<p class="text">
+									<span>
+										若要进行 k-fold交叉验证，设置“cv_k”值大于等于2，否则训练时按 7/3 拆分训练、验证集。类型：int，范围：[1,5]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h3">主要调整参数</p>
+								<p class="h4">hidden</p>
+								<p class="text">
+									<span>
+									隐层数及对应每层节点数（默认[20, 20]，即2个隐层，每层20个神经元），隐层越多，每层神经元越多，模型拟合的效果越好，但是运算效率会下降。类型：list[int]
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">input_dropout_ratio</p>
+								<p class="text">
+									<span>
+									输入层特征舍去比例（默认为0），如果模型特征过多，设置大于0的值会增加模型泛化能力，推荐 0.1 或 0.2。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">l1</p>
+								<p class="text">
+									<span>
+									l1正则化（默认0），设置该值可减小过拟合。类型：float，范围：[0, small)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">l2</p>
+								<p class="text">
+									<span>
+									L2正则化（默认0），设置该值可减小过拟合。类型：float，范围：[0, small)。
+									</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div id="RF">
+						<p class="h2">随机森林</p>
+						<p class="text">
+							<span class="explain">用随机方式建立一个森林，森林由很多决策树组成，随机森林的每一棵决策树之间没有关联。训练得到森林后，当新样本进入时，森林中每一棵决策树分别判断新样本属于哪一类，然后哪一类被选择最多，就预测该样本为那一类（类似投票）。具体参<a href="https://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97"  target="view_window">https://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97</a>，<a href="https://zh.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97"  target="view_window">https://zh.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97</a>见。同gbm一样，该算法把缺失值当做一个类型，而不会进行填充。</span>
+						</p>
+												<p class="h3">算法默认参数</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">是否对全量做统计、是否做抽样统计</p>
+								<p class="text">
+									<span>
+										可选择是否做全量统计，是否做抽样统计。数值变量统计最大、最小、中位数、均值、方差，因子型变量统计各变量的不同因子及对应样本数，可选择全量或随机抽样统计，或不进行统计。<br />
+设置“cal_statics_universal”为true时，进行全量统计；“cal_statics_sampling”设为true时，进行抽样统计（atom根据数据量决定抽样比例），若“cal_statics_sampling”设置成小于1的小数，表示按该比例抽样，若“cal_statics_sampling”设置成大于1的整数，表示按此样本量抽样；都为false，不进行统计。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">特征最大缺失值比例</p>
+								<p class="text">
+									<span>
+										若变量的缺失记录大于所设最大缺失比率，就删除变量。对应配置文件中的“max_variable_miss_prop”。类型：float，范围：[0.7,1.0]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">最大因子数</p>
+								<p class="text">
+									<span>
+										若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。类型：int，范围：[0,1000]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">是否抽样</p>
+								<p class="text">
+									<span>
+										可选择是否抽样。若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。设置“sampling_method”设 null，不抽样。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">欠抽样比例</p>
+								<p class="text">
+									<span>
+										可选择是否欠抽样，比例可选，默认值5（多类/少类） 。设置“sampling_method”为“undersampling”时，进行欠抽样，比例为“unbalanced_cutoff”的值。类型：int，范围：[2,∞）。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">k折交叉验证</p>
+								<p class="text">
+									<span>
+										若要进行 k-fold交叉验证，设置“cv_k”值大于等于2，否则训练时按 7/3 拆分训练、验证集。类型：int，范围：[1,5]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h3">主要调整参数</p>
+								<p class="h4">ntrees </p>
+								<p class="text">
+									<span>
+									树的棵数（默认50），增加树的棵数可以降低过拟合，但建议取值不要过大（一般不超过200），否则运算慢，且对过拟合的降低也不会很显著。类型：int，范围： (0, ∞)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">max_depth</p>
+								<p class="text">
+									<span>
+									树最大深度（默认20），树越深，偏差降低，方差增加，且运行越慢。类型：int，范围：(0, ∞)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">sample_rate</p>
+								<p class="text">
+									<span>
+									训练每棵树所用子样本占总样本比例（默认0.632，自助抽样），该比例越低，运算加快，树与树之间相关性下降，方差下降，但偏差可能增加。sample_rate一般与ntree值同时调整，sample_rate减小时，ntree最好取大一些。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">min_row</p>
+								<p class="text">
+									<span>
+									树的叶节点所需最少样本数（默认10），该值越大，模型方差减小，但偏差变大。类型：float，范围：(0，∞)。
+									</span>
+								</p>
+							</li>
+								<li>
+								<p class="h4">col_sample_rate_per_tree</p>
+								<p class="text">
+									<span>
+									每棵数特征的抽样比例（默认1），比例越大，偏差会减小，但会降低单棵数的多样性，同时会运行会变慢。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div id="NB">
+						<p class="h2">朴素贝叶斯</p>
+						<p class="text">
+							<span class="explain">朴素贝叶斯分类器是基于特征条件独立性假设（对已知类别，假设所有特征相互独立，也就是说每个特征对分类结果的影响互不干扰），利用贝叶斯公式进行分类的简单概率分类器。朴素贝叶斯思想为：对于给出的待分类项，求解在此项出现的条件下各个类别出现的概率，哪个最大，就认为此待分类项属于哪个类别。具体参见<a href="https://baike.baidu.com/item/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF"  target="view_window">https://baike.baidu.com/item/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF</a>，<a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier"  target="view_window">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a>。该算法会忽略只要含有一个缺失变量的样本，鉴于银行数据会有很多缺失值，所以Atom默认会对数据进行填充（数值型填充中位数，因子型填充数量最多的因子）。</span>
+						</p>
+												<p class="h3">算法默认参数</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">是否对全量做统计、是否做抽样统计</p>
+								<p class="text">
+									<span>
+										可选择是否做全量统计，是否做抽样统计。数值变量统计最大、最小、中位数、均值、方差，因子型变量统计各变量的不同因子及对应样本数，可选择全量或随机抽样统计，或不进行统计。<br />
+设置“cal_statics_universal”为true时，进行全量统计；“cal_statics_sampling”设为true时，进行抽样统计（atom根据数据量决定抽样比例），若“cal_statics_sampling”设置成小于1的小数，表示按该比例抽样，若“cal_statics_sampling”设置成大于1的整数，表示按此样本量抽样；都为false，不进行统计。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">特征最大缺失值比例</p>
+								<p class="text">
+									<span>
+										若变量的缺失记录大于所设最大缺失比率，就删除变量。对应配置文件中的“max_variable_miss_prop”。类型：float，范围：[0.7,1.0]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">最大因子数</p>
+								<p class="text">
+									<span>
+										若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。类型：int，范围：[0,1000]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">是否抽样</p>
+								<p class="text">
+									<span>
+										可选择是否抽样。若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。设置“sampling_method”设 null，不抽样。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">欠抽样比例</p>
+								<p class="text">
+									<span>
+										可选择是否欠抽样，比例可选，默认值5（多类/少类） 。设置“sampling_method”为“undersampling”时，进行欠抽样，比例为“unbalanced_cutoff”的值。类型：int，范围：[2,∞）。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">k折交叉验证</p>
+								<p class="text">
+									<span>
+										若要进行 k-fold交叉验证，设置“cv_k”值大于等于2，否则训练时按 7/3 拆分训练、验证集。类型：int，范围：[1,5]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h3">主要调整参数</p>
+								<p class="h4">laplace</p>
+								<p class="text">
+									<span>
+									拉普拉斯平滑（默认0），为避免部分属性的条件概率为0，通常可以设一个比较小的数。类型：float，范围：(0, ∞)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">min_sdev</p>
+								<p class="text">
+									<span>
+									样本不足情况下最小标准偏差（默认0.001），特征为数值型时，假设特征服从正态分布，其所需要的标准差参数。类型：float，范围：[0, samll)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">eps_sdev</p>
+								<p class="text">
+									<span>
+									标准偏差阈值（默认0）。类型：float，范围：[0, small)。
+									</span>
+								</p>
+							</li>
+							
+						</ul>
+					</div>
+					<div id="GBM">
+						<p class="h2">梯度提升算法</p>
+							<p class="text">
+							<span class="explain">算法为每一个样本赋上一个权重值，初始时，都是一样重要。在每一步迭代训练得到一个决策树模型，模型对样本的估计有残差(residual)，那么下一次，在残差减少的梯度(Gradient)方向上建立一个新的决策树模型，。进行了N次迭代，便得到N个分类器（树），然后将它们组合起来（加权或者投票等），得到一个最终的模型。具体参见<a href="https://en.wikipedia.org/wiki/Gradient_boosting"  target="view_window">https://en.wikipedia.org/wiki/Gradient_boosting</a>。该算法把缺失值当做一个类型，而不会进行填充。</span>
+						</p>
+												<p class="h3">算法默认参数</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">是否对全量做统计、是否做抽样统计</p>
+								<p class="text">
+									<span>
+										可选择是否做全量统计，是否做抽样统计。数值变量统计最大、最小、中位数、均值、方差，因子型变量统计各变量的不同因子及对应样本数，可选择全量或随机抽样统计，或不进行统计。<br />
+设置“cal_statics_universal”为true时，进行全量统计；“cal_statics_sampling”设为true时，进行抽样统计（atom根据数据量决定抽样比例），若“cal_statics_sampling”设置成小于1的小数，表示按该比例抽样，若“cal_statics_sampling”设置成大于1的整数，表示按此样本量抽样；都为false，不进行统计。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">特征最大缺失值比例</p>
+								<p class="text">
+									<span>
+										若变量的缺失记录大于所设最大缺失比率，就删除变量。对应配置文件中的“max_variable_miss_prop”。类型：float，范围：[0.7,1.0]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">最大因子数</p>
+								<p class="text">
+									<span>
+										若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。类型：int，范围：[0,1000]。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">是否抽样</p>
+								<p class="text">
+									<span>
+										可选择是否抽样。若因子型变量的不同因子数大于所设最大因子数（默认不要超过 1000），就删除变量。对应配置文件中的“max_factor_prop”。设置“sampling_method”设 null，不抽样。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">欠抽样比例</p>
+								<p class="text">
+									<span>
+										可选择是否欠抽样，比例可选，默认值5（多类/少类） 。设置“sampling_method”为“undersampling”时，进行欠抽样，比例为“unbalanced_cutoff”的值。类型：int，范围：[2,∞）。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">k折交叉验证</p>
+								<p class="text">
+									<span>
+										若要进行 k-fold交叉验证，设置“cv_k”值大于等于2，否则训练时按 7/3 拆分训练、验证集。类型：int，范围：[1,5]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h3">主要调整参数</p>
+								<p class="h4">ntrees</p>
+								<p class="text">
+									<span>
+								树的棵数（默认50），该值越大，偏差减小，但方差变大，建议取值不超过100，否则运算慢。类型：int , 范围：(0, ∞)
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">max_depth</p>
+								<p class="text">
+									<span>
+									树最大深度（默认5），取值不要超过10，否则运算慢，容易过拟合。类型：int，范围：(0, ∞)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">learn_rate</p>
+								<p class="text">
+									<span>
+									每次更新权重（默认0.1），取值越小，效果越好，但过小时需要增加树的棵数来使最终模型逼近最佳。类型：float，范围：[0,1]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">min_rows</p>
+								<p class="text">
+									<span>
+									树的叶节点所需最少样本数（默认10），该值越大，模型方差减小，但偏差变大。类型：float，范围：(0，∞)。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">sample_rate</p>
+								<p class="text">
+									<span>
+									训练每棵数所用子样本占总样本比例（默认1），该比例越低，方差下降，但偏差变大。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">sample_rate_per_class</p>
+								<p class="text">
+									<span>
+									训练每棵数所用特征数占总特征数比例（默认1），该减小该比例可增加泛化性能，但偏差可能变大。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">col_sample_rate</p>
+								<p class="text">
+									<span>
+									每棵数分支时所用特征数占总特征数比例（默认1），该减小该比例可增加泛化性能，但偏差可能变大。类型：float，范围：[0, 1.0]。
+									</span>
+								</p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div id="yuzhi">
+					<p class="h1">基于阈值的评估指标</p>
+					<p class="h2" id="hx">混淆矩阵和评估指标</p>
+					<p class="text">
+						<span class="explain">通过它可以直观地观察到算法的效果。它反映了分类结果的混淆程度，真实的正负样本数和预测的正负样本数，以及真实与预测之间的重合。</span>
+					</p>
+					<div class="table_table">
+						
+					
+					<table>
+					<tr>
+						<td rowspan="2" colspan="2"class="table_left left_none top_none"></td>
+						<td colspan="2" class="top_none">预测</td>
+						<td colspan="3" class="top_none"></td>
+					</tr>
+					<tr>
+						<td class="width_title">0</td>
+						<td class="width_title">1</td>
+						<td  class="width_title">合计</td>
+						<td colspan="2">比率</td>
+					</tr>
+					<tr>
+						<td rowspan="2" class="left_one text_line left_none">实际</td>
+						<td>0</td>
+						<td class="table_left diff_td">
+							<span>tn</span>
+							<span>(true negative)</span>
+						</td>
+						<td class="diff_td">
+							<span>fp</span>
+							<span>(false positive)</span>
+						</td>
+						<td>
+							<span>fp+tn</span>
+							<span>(actual negative)</span>
+						</td>
+						<td class="four">
+							<span>tn/(fp+tn)</span>
+							<span>(即tnr，spencificity)</span>
+						</td>
+						<td class="five">
+							<span>fp/(fp+tn)</span>
+							<span>(即fpr)</span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td>1</td>
+						<td class="diff_td">
+							<span>fn</span>
+							<span>(false negative)</span>
+						</td>
+						<td class="diff_td">
+							<span>tp</span>
+							<span>(true positive)</span>
+						</td>
+						<td>
+							<span>tp+fn</span>
+							<span>(actual positive)</span>
+						</td>
+						<td>
+						 	<span>tp/(tp+fn)</span>
+							<span>(即tpr，recall，sensitivity)</span>
+						</td>
+						<td>
+						 	<span>fn/(tp+fn)</span>
+							<span>(即fnr)</span>
+						</td>
+					</tr>
+						<tr>
+						<td rowspan="2" class="left_one left_none"></td>
+						<td class="text_line">合计</td>
+						<td>
+							<span>tn+fn</span>
+							<span>(predicted negative)</span>
+						</td>
+						<td>
+							<span>tp+fp</span>
+							<span>(predicted positive)</span>
+						</td>
+						<td>
+							<span>tp+fn+fp+tn</span>
+							<span></span>
+						</td>
+						<td>
+							<span></span>
+							<span></span>
+						</td>
+						<td>
+							<span></span>
+							<span></span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td class="text_line">比率</td>
+						<td>
+							<span></span>
+							<span></span>
+						</td>
+						<td>
+							<span>tp/(tp+fp)</span>
+							<span>(即precision)</span>
+						</td>
+						<td>
+							<span></span>
+							<span></span>
+						</td>
+						<td colspan="2">
+						 	<span>（tp+tn)/(tp+fn+fp+tn)</span>
+							<span>(即accuracy)</span>
+						</td>
+					</tr>
+					</table>
+					</div>
+					<ul class="table_mean">
+						<li><span>tp</span>被模型预测为正类的正样本。</li>
+						<li><span>fp</span>被模型预测为正类的负样本。</li>
+						<li><span>tn</span>被模型预测为负类的负样本。</li>
+						<li><span>fn</span>被模型预测为负类的正样本。</li>
+					</ul>
+					<ul class="table_mean">
+						<li><span>tpr</span>真正率，所有真实正样本中，被预测为正样本的比率。</li>
+						<li><span>fpr</span>假正率，所有真实负样本中，被预测为正样本的比率。</li>
+						<li><span>tnr</span>真负率，所有真实负样本中，被预测为正样本的比率。</li>
+						<li><span>fnr</span>假负率，所有真实负样本中，被预测为正样本的比率。</li>
+					</ul>
+					<ul class="method_list">
+							<li>
+								<p class="h4">accuracy</p>
+								<p class="text">
+									<span>
+										精确度，预测正确的样本占总样本的比率。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">precision</p>
+								<p class="text">
+									<span>
+										准确率（查准率），正确预测为正样本占所有预测为正样本的比率。precision 体现了模型对负样本的区分能力，precision越高，说明模型对负样本的区分能力越强。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">recall</p>
+								<p class="text">
+									<span>
+										召回率（查全率），正确预测为正样本占所有真实真样本的比率。体现了模型对正样本的识别能力，recall 越高，说明模型对正样本的识别能力越强。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">f1</p>
+								<p class="text">
+									<span>
+										recall和precision的综合，f1越高说明模型越稳健，$f_1 = \frac {2\cdot precision \cdot recall}{precision+recall}$。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">f2</p>
+								<p class="text">
+									<span>
+										recall和precisoin的综合，它对precisoion赋予了更大的权重，$f_2 = \frac {5\cdot precision \cdot recall}{4 \cdot precision+recall}$。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">f0.5</p>
+								<p class="text">
+									<span>
+									此时β=0.5， $f_0.5$则是加权调和平均,度量了精准率对召回率的想对重要性$\frac {1}{F_\beta} = \frac {1}{1 + \beta^2} (\frac {1}{P}+\frac {\beta^2}{R})$。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">sensitivity</p>
+								<p class="text">
+									<span>
+								即tpr。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">specificity</p>
+								<p class="text">
+									<span>
+									即tnr。
+									</span>
+								</p>
+							</li>
+							
+						</ul>
+				</div>
+				<div id="combition">
+					<p class="h1">综合评估指标</p>
+					<div id="roc">
+						<p class="h2">ROC曲线和AUC</p>
+						<p class="text">
+							<span class="explain">在不同的阈值下，fpr和tpr所组成的坐标连接而成的曲线，fpr为横坐标，tpr为纵坐标。如上图所示ROC曲线，理想目标：tpr=1，fpr=0，即图中(0,1)点，故ROC曲线越靠拢(0,1)点，越偏离45度对角线越好，即Sensitivity、Specificity越大效果越好。红色斜对角线表示随机模型。<br /><br />AUC 是ROC曲线下的面积，取值范围在0.5和1之间。使用AUC值作为评价标准是因为很多时候ROC曲线并不能清晰的说明哪个分类器的效果更好，而AUC作为数值可以直观的评价分类器的好坏，值越大越好。AUC表示当你随机挑选一个正样本以及一个负样本，当前的分类算法根据计算得到的Score值将这个正样本排在负样本前面的概率。当然，AUC值越大，当前的分类算法越有可能将正样本排在负样本前面，即能够更好的分类。</span>
+
+						</p>
+						<ul class="method_list">
+							<li>
+								<p class="h4">GINI</p>
+								<p class="text">
+									<span>
+										正样本数在负样本数上的的累积分布与随机分布曲线之间的面积，正样本与负样本分布之间的差异越大，gini指标越高，表明模型的风险区分能力越强。
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">logloss</p>
+								<p class="text">
+									<span>
+										对数损失，该值越小表示真实标签与预测概率间的差距越小，分类性能越好。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">MES</p>
+								<p class="text">
+									<span>
+										平均平方误差，该值越小表示分类性能越好。
+
+									</span>
+								</p>
+							</li>
+							<li>
+								<p class="h4">RMES</p>
+								<p class="text">
+									<span>
+										平均平方误差的平方根，该值越小表示分类性能越好。
+									</span>
+								</p>
+							</li>
+							<li>
+								<img src="img/img/1-1.png" alt="" />
+								<span class="picture">ROC曲线图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="recall">
+						<p class="h2"> Precision/Recall曲线</p>
+						<p class="text">
+							<span class="explain">precision-recall曲线由precision和recall组成坐标绘制的曲线，一般情况下，recall和precision成负相关。<br /><br />Precision=TP/（TP+FP）是指每一次计算的精准率，即预测为正的样本中有多少为正的样本，作为纵坐标。<br />Recall=TP/（TP+FN）是指每一次计算的召回率，即样本中的正例有多少被预测正确了，作为横坐标。<br /><br />Recall体现了分类模型对正样本的识别能力，Recall越高，说明模型对正样本的识别能力越强，Precision体现了模型对负样本的分析能力，Precision越高，说明模型对负样本的区分能力越强，Precision/Recall曲线反映了分类器对正样本的识别准确程度和对正样本的覆盖能力之间的权衡。</span>
+
+						</p>
+						<ul class="method_list">
+					
+							<li>
+								<img src="img/img/1-2.png" alt="" />
+								<span class="picture">Precision/Recall曲线图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="lift">
+						<p class="h2">Lift曲线</p>
+						<p class="text">
+							<span class="explain">为在不同的打分阈值下（从高到底），准确率（precision）与实际样本中正样本比例的比率（precision/((tp+fn)/(tp+fn+tn+fp))），即与不利用模型相比，模型的预测能力提升了多少。不利用模型，只能用(tp+fn)/(tp+fn+tn+fp)估计正例的比例，利用模型后，可从预测为正的子集tp+fp中选正例，这时预测准确率为precision（tp/(tp+fp)）。下图为Lift曲线，可见左边打分阈值较高时，提升较大，随着阈值的降低，最后所有样本预测为正，此时准确率与实际样本中的正例比率没区别，所以Lift为1。</span>
+
+						</p>
+						<ul class="method_list">
+					
+							<li>
+								<img src="img/img/1-3.png" alt="" />
+								<span class="picture">Lift曲线图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="gain">
+						<p class="h2">Cumulative Gain曲线</p>
+						<p class="text">
+							<span class="explain">累积增益图，增益图实际上描述的是整体覆盖率指标。按照模型预测出的概率从高到低排列，求得每一个百分位及其之前的累积正样本数（tp）与总正样本数（tp+fn）的比率，并将值标注在图形区域内，则形成累积的增益图。累积曲线越快爬向左上，表示模型性能越好。</span>
+
+						</p>
+						<ul class="method_list">
+					
+							<li>
+								<img src="img/img/1-4.png" alt="" />
+								<span class="picture">Cumulative Gain曲线图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="ks">
+						<p class="h2">KS曲线</p>
+						<p class="text">
+							<span class="explain">由两条曲线组成，即在不同打分分组下，累积的真正样本比例（真正率，tpr）曲线与假正样本比率（假正率，fpr）曲线。ks值就是这两条曲线间的最大差值，ks指标越大，那么模型的风险区分能力越强。</span>
+
+						</p>
+						<ul class="method_list">
+					
+							<li>
+								<img src="img/img/1-5.png" alt="" />
+								<span class="picture">KS曲线图</span>
+							</li>
+						</ul>
+					</div>
+					<div id="score">
+						<p class="h2">SCORE分组统计</p>
+						<p class="text">
+							<span class="explain">
+								Score分组统计就是把模型预测输出的分数分为10个区间，精确度为0.1，然后进行分组统计各项评估指标。<br /><br />比如统计0.9~1区间内的正样本占比，即分数在0.9至1之间的样本数与总样本的比值。 真正例，伪正例，伪负例，真负例等指标都会随着判定阈值的变化而变化。<br /><br />比如设定阈值为0.5，则认为打分在0.5到1之间的样本都为正样本，此时再将预测的结果和实际样本进行对比即可算出其他所有指标。关于指标的计算可参见<a href=""></a>混淆矩阵和评估指标。
+							</span>
+
+						</p>
+					</div>
+					<div id="topn">
+						<p class="h2">TOPN维度统计</p>
+						<p class="text">
+							<span class="explain">
+								topN维度统计指标是指将score中topN%（N=10，20，30...100）的样本全部看做正样本，然后对其它指标进行计算。<br /><br />如：N=10，则top10%是指将前10%的样本均视为正样本，剩余的90%均视为负样本，此时再将预测的结果和实际样本的正负例进行对比算出TP，FP，TN，FN，再根据评估指标的计算公式计算出精准率，召回率，specifity。
+							</span>
+
+						</p>
+					</div>
+					<div id="exported">
+						<p class="h2">模型部署</p>
+						<p class="h4">从DataBrain平台导出模型</p>
+						<p class="text">
+							<span class="explain">
+								导出下载AtomLearn模型文件（.zip格式），解压可得AtomLearn_export_model.zip和h2o-genmodel.jar包；<br />
+								文件说明：<br />
+								AtomLearn_export_model.zip，是AtomLearn任务结束以后生成的可部署mojo文件；<br />
+								h2o-genmodel.jar，部署需要用到的jar包；
+							</span>
+
+						</p>
+						<p class="h4">部署流程</p>
+						<p class="text">
+							<span class="explain">
+								将 mojo 文件（AtomLearn_export_model.zip），结合h2o-genmodel.jar 包，在任意 jdk 环
+								境的单机可部署，并对 csv 数据进行预测，预测命令如下：<br />
+								java -cp .;path/of/h2o-genmodel.jar hex.genmodel.tools.PredictCsv --header --mojo
+								path/of/model-zip --input path/of/input-csv --output path/of/output-csv --decimal
+								--separator "|" --setConvertInvalidNum <br /><br />
+								各参数作用：<br />
+								-cp .;path/of/h2o-genmodel.jar，为 h2o-genmodel.jar 的路径，注意：windows 系统，语句
+								-cp .;path/of/jar 中间用的是分号";"，但 linux 用冒号":"，即-cp .:path/of/h2o-genmodel.jar；<br />
+								hex.genmodel.tools.PredictCsv，表示对 csv 中的数据进行预测；<br />
+								--header 表示输入有表头；<br />
+								--mojo， mojo 的 zip 文件路径；<br />
+								--input ，要预测时输入 csv 文件路径；<br />
+								--output，输出的文件路径；<br />
+								--decimal，输出值设为十进制浮点，若不设置，默认为十六进制（hexadecimal）；<br />
+								--separator，输入的 csv 分隔符，默认逗号（可不加此参数）。若不是逗号可设置，比如--separator "|" ；<br />
+								--setConvertInvalidNum，表示将非法的数值类型数据转化成 NA；<br />
+							</span>
+
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+	</body>
+
+</html>
+<script src="../../js/jqeury.min.3.1.js?v=2.1"></script>
+<script src="js/help.js?v=2.1"></script>
+<script type="text/x-mathjax-config">
+var mathId = document.body; //选择公式识别范围
+MathJax.Hub.Config({
+    showProcessingMessages: false, //关闭js加载过程信息
+    messageStyle: "none", //不显示信息
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+        inlineMath:  [ ["$", "$"] ], //行内公式选择$
+        displayMath: [ ["$$","$$"] ], //段内公式选择$$
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'] //避开某些标签
+    },
+    "HTML-CSS": {
+        availableFonts: ["STIX","TeX"], //可选字体
+        showMathMenu: false //关闭右击菜单显示
+    }
+
+});
+
+MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+</script>
+<script src="js/MathJax.js"></script>
+<!--<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
